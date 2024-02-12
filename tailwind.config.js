@@ -12,6 +12,8 @@ export default {
       'primary-dark': '#3A4D39',
       'primary-light': '#739072',
       secondary: '#ECE3CE',
+      purple: '#32006e',
+      gold: '#e8e3d3'
     },
     extend: {},
   },

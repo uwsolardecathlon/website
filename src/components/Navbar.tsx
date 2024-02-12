@@ -1,42 +1,21 @@
-import React from 'react';
-import { IconType } from 'react-icons';
-import { twMerge } from 'tailwind-merge';
-import { Link } from 'react router-dom';
+//import React from 'react';
 import Button from './Button.tsx';
+import Navitem  from './Navitem.tsx';
 
-interface NavProp {
-}
-
-const NavBar : React.FC = (): NavProp => {
+function Navbar() {
     return (
-    <header className={'flex-auto justify-content: space-between gap-20;'}>
+    <nav className={'flex flex-row justify-between gap-17 bg-opacity-0 mx-0 px-11 py-5 items-center'}>
         <h1>Logo</h1>
-        <ul className={'flex-auto justify-content: space-between gap-2;'}>
-            <li>
-                <Link to='/home'>HOME</Link>
-            </li>
-            <li>
-                <Link to='/about'>ABOUT</Link>
-            </li>
-            <li>
-                <Link to='/team'>TEAM</Link>
-            </li>
-            <li>
-                <Link to='/competition'>COMPETITION</Link>
-            </li>
-            <li>
-                <Link to='/funraising'>FUNDRAISING</Link>
-            </li>
-            <li>
-                <Button label='Join' variant='primary'>
-
-                </Button>
-            </li>
+        <ul className={'flex flex-row justify-between gap-8 list-style-type: none;'}>
+            <Navitem label='Home'/>
+            <Navitem label='Team'/>
+            <Navitem label='Competition'/>
+            <Navitem label='Fundraising'/>
+            <Button label='Join' />
         </ul>
-    </header>
+    </nav>
     );
-};
+}
   
-  
-export default NavBar;
+export default Navbar;
   
