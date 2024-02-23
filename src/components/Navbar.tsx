@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import { NavLink } from 'react-router-dom';
-import { RiMenuLine as Open } from 'react-icons/ri';
 import { useTransition, animated } from '@react-spring/web';
 import { Fade as Hamburger } from 'hamburger-react';
 
