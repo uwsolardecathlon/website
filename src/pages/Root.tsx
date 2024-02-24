@@ -6,7 +6,7 @@ const Root = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className='py-20 px-4 md:px-11'>
         <Outlet />
       </main>
     </>
