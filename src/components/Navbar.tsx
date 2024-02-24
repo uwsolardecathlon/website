@@ -38,7 +38,7 @@ function Navbar() {
       <div className='flex flex-col items-center md:hidden'>
         <div className='flex w-full h-[10vh] justify-between items-center p-4'>
           <p>Logo</p>
-          <Hamburger toggle={setShow} toggled={show} size={25} />
+          <Hamburger direction='right' toggle={setShow} toggled={show} size={25} />
         </div> 
         {transition((style, item) =>
          item ? 

@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 function NavItem({ label }: { label: string }) {
   return (
-    <li className={'flex items-center'}>
+    <li className={'flex items-center justify-center'}>
       <NavLink
         to={`/${label === 'home' ? '' : label}`}
         className={
