@@ -19,7 +19,9 @@ function Navbar() {
     <nav className='fixed w-full z-50'>
       {/* Desktop */}
       <div className='hidden md:flex flex-row justify-between gap-17 bg-opacity-0 mx-0 px-11 py-5 items-center'>
-        <p>Logo</p>
+        <NavLink to='/'>
+          <p>Logo</p>
+        </NavLink>
         <ul className={'flex flex-row justify-between gap-8'}>
           <NavItem label='home' />
           <NavItem label='team' />
@@ -35,7 +37,7 @@ function Navbar() {
 
       {/* Mobile */}
       <div className='flex flex-col items-center md:hidden'>
-        <div className='flex w-full h-[10vh] justify-between items-center p-4'>
+        <div className='flex w-full h-[10vh] justify-between items-center p-8'>
           <p>Logo</p>
           <Hamburger
             direction='right'
