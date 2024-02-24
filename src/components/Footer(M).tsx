@@ -4,7 +4,7 @@ import {
 } from "react-icons/fa6";
 import { MdOutlineMail as Email } from "react-icons/md";
 
-const Footer = () => {
+const FooterM = () => {
   return (
     <footer className="bg-neutral-100 text-white px-16 py-16 uppercase">
       <div className="flex w-full flex-col justify-between pb-10">
@@ -37,4 +37,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterM;
