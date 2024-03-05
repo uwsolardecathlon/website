@@ -31,8 +31,8 @@ const Button = ({
       )}
       {...rest}
     >
-      {Icon && <Icon aria-hidden='true' className='shrink-0' />}
       {label}
+      {Icon && <Icon aria-hidden='true' className='shrink-0' />}
     </button>
   );
 };

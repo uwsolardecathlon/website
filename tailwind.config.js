@@ -13,12 +13,13 @@ export default {
       'primary-light': '#739072',
       secondary: '#ECE3CE',
       purple: '#32006e',
-      gold: '#e8e3d3'
+      gold: '#e8e3d3',
+    },
+    fontFamily: {
+      sans: ['Satoshi', 'sans-serif'],
     },
     extend: {},
   },
-  fontFamily: {
-    sans: ['Inter', 'sans-serif'],
-  },
+
   plugins: [],
 };

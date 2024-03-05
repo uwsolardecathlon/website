@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Satoshi';
+    src: url(../../fonts/Satoshi-Regular.woff) format('woff');
+  }
+}
+
 /* CSS Reset */
 *,
 *::before,

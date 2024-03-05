@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <nav className='fixed w-full z-50'>
       {/* Desktop */}
-      <div className='hidden md:flex flex-row justify-between gap-17 bg-opacity-0 mx-0 px-11 py-5 items-center'>
+      <div className='hidden md:flex flex-row justify-between gap-17 bg-opacity-0 mx-0 px-24 py-5 items-center'>
         <NavLink to='/'>
           <p>Logo</p>
         </NavLink>
@@ -51,7 +51,7 @@ function Navbar() {
             <animated.ul
               style={style}
               className={
-                'item flex relative opacity-10 text-xl w-full h-[90vh] justify-items-center justify-around flex-wrap flex-col bg-neutral-400/50'
+                'item flex relative opacity-10 text-xl w-full h-[90vh] justify-items-center justify-around flex-wrap flex-col bg-white'
               }
             >
               <NavItem label='home' />
