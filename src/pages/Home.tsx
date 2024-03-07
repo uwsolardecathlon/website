@@ -60,9 +60,9 @@ const Home = () => {
           <Button className='w-fit' label='Meet the team' variant='secondary' />
         </div>
       </section>
-      <section>
-        <div className='flex justify-content center'>
-          <div>
+      <section className='flex flex-col items-center'>
+        <div className='flex flex-col items-center'>
+          <div className='flex flex-col items-center'>
             <H2>Get Involved</H2>
             <p>
               We accept any and all students to join our group. Find out how to
