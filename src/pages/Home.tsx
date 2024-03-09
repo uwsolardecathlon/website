@@ -63,15 +63,19 @@ const Home = () => {
           <Button className="w-fit" label="Meet the team" variant="secondary" />
         </div>
       </section>
-      <section className='flex flex-col items-center gap-4'>
-        <H2>Get Involved</H2>
-        <p>
-          We accept any and all students to join our group. Find out how to
-          join or support us through donations!
-        </p>
-        <div className="flex gap-4">
-          <Button label="Join Us" variant="primary" />
-          <Button label="Donate" variant="secondary" />
+
+
+      <section className='flex flex-col bg-secondary items-center p-20'>
+        <div className='flex flex-col items-center gap-4 w-1/2'>
+          <H2>Get Involved</H2>
+          <p className="text-wrap text-center">
+            We accept any and all students to join our group. Find out how to
+            join or support us through donations!
+          </p>
+          <div className="flex gap-4">
+            <Button label="Join Us" variant="primary" />
+            <Button label="Donate" variant="secondary" />
+          </div>
         </div>
       </section>
     </>
