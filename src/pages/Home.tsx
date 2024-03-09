@@ -8,7 +8,8 @@ import Subtitle2 from "../components/text/Subtitle2.tsx";
 const Home = () => {
   return (
     <>
-      <section className="flex flex-col gap-7 mt-44">
+      <section className="flex flex-col gap-20 mt-40">
+        <div className="flex flex-col gap-7 ">
         <H1>UW Solar Decathlon</H1>
         <Subtitle1>
           Building a sustainable future at the University of Washington
@@ -16,25 +17,27 @@ const Home = () => {
         <Button
           className="w-fit"
           label="Learn More"
-          variant="secondary"
+          variant='primary'
           icon={GoArrowRight}
         />
+        </div>
         <img
-          src="/website/public/images/"
+          src="/images/home_hero.png"
           alt="picture of solar decathlon event"
+          className="max-h-[40rem]"
         />
       </section>
-      <section className="flex flex-row bg-primary text-white">
-        <H2>
+      <section className="flex flex-row bg-primary text-white py-24 px-20 gap-24 mt-20">
+        <H2 className="text-white">
           Our mission is to design and build energy-efficient, low-carbon
           buildings.
         </H2>
-        <div className="flex flex-col">
-          <Subtitle2>
+        <div className="flex flex-col gap-4">
+          <Subtitle2 className="text-white">
             We participate in the Solar Decathlon, a prestigious collegiate
             competition run by the US Department of Energy.
           </Subtitle2>
-          <Button label="View the challenge" />
+          <Button label="View the challenge" variant='tertiary' className="w-fit border-white"/>
         </div>
       </section>
       <section className="flex space-between gap-24">
