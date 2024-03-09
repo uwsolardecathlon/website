@@ -34,7 +34,7 @@ const Home = () => {
             We participate in the Solar Decathlon, a prestigious collegiate
             competition run by the US Department of Energy.
           </Subtitle2>
-          <Button label="View at the challenge" />
+          <Button label="View the challenge" />
         </div>
       </section>
       <section className="flex space-between gap-24">

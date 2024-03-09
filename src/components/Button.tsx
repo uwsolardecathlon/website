@@ -26,6 +26,8 @@ const Button = ({
           ? 'bg-primary text-white'
           : variant === 'secondary'
           ? 'text-neutral-100 border border-neutral-100'
+          : variant === 'tertiary'
+          ? 'text-white border-2 border-metallic-gold'
           : 'text-neutral-100',
         className
       )}
