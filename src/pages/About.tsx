@@ -21,7 +21,7 @@ const About = () => {
           className="max-h-[40rem]"
         />
       </section>
-      <section className="flex flex-row mt-20 gap-20">
+      <section className="flex flex-row mt-20 gap-20 items-center">
         <div className="flex flex-col gap-10">
           <Subtitle2>WHO WE ARE</Subtitle2>
           <H2>Competition Origins</H2>
@@ -40,14 +40,14 @@ const About = () => {
           alt="image of Gould Hall"
         />
       </section>
-      <section className="flex flex-row mt-20 gap-20">
+      <section className="flex flex-row mt-20 gap-20 items-center">
         <img
           className="h-auto max-w-[555px] py-20"
           src="/images/about_origin.png"
           alt="image of Gould Hall"
         />
         <div className="flex flex-col gap-10">
-          <Subtitle2>WHAt WE DO</Subtitle2>
+          <Subtitle2>WHAT WE DO</Subtitle2>
           <H2>Some Short Tagline</H2>
           <div className="flex flex-col gap-5">
             <p>
