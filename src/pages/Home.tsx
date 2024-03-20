@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <section className="flex flex-col gap-20 mt-40">
-        <div className="flex flex-col gap-7 ">
+        <div className="flex flex-col gap-7">
           <H1>UW Solar Decathlon</H1>
           <Subtitle1>
             Building a sustainable future at the University of Washington
@@ -23,7 +23,7 @@ const Home = () => {
         </div>
         <img
           src="/images/home_hero.png"
-          alt="picture of solar decathlon event"
+          alt="picture of Solar Decathlon event"
           className="max-h-[40rem]"
         />
       </section>

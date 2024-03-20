@@ -1,5 +1,3 @@
-import Button from "../components/Button.tsx";
-import { GoArrowRight } from "react-icons/go";
 import H1 from "../components/text/H1.tsx";
 import H2 from "../components/text/H2.tsx";
 import Subtitle1 from "../components/text/Subtitle1.tsx";
@@ -21,8 +19,8 @@ const About = () => {
           className="max-h-[40rem]"
         />
       </section>
-      <section className="flex flex-row mt-20 gap-20 items-center">
-        <div className="flex flex-col gap-10">
+      <section className="flex flex-row mt-28 gap-20 items-center">
+        <div className="flex flex-col gap-7">
           <Subtitle2>WHO WE ARE</Subtitle2>
           <H2>Competition Origins</H2>
           <div className="flex flex-col gap-5">
@@ -35,18 +33,18 @@ const About = () => {
           </div>
         </div>
         <img
-          className="h-auto max-w-[555px] py-20"
+          className="h-auto max-w-[555px]"
           src="/images/about_origin.png"
           alt="image of Gould Hall"
         />
       </section>
-      <section className="flex flex-row mt-20 gap-20 items-center">
+      <section className="flex flex-row mt-28 gap-20 items-center">
         <img
-          className="h-auto max-w-[555px] py-20"
+          className="h-auto max-w-[555px]"
           src="/images/about_origin.png"
           alt="image of Gould Hall"
         />
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-7">
           <Subtitle2>WHAT WE DO</Subtitle2>
           <H2>Some Short Tagline</H2>
           <div className="flex flex-col gap-5">
