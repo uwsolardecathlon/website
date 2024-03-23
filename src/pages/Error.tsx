@@ -1,5 +1,5 @@
-const Contact = () => {
-  return <div>Contact</div>;
+const Error = () => {
+  return <div>Error</div>;
 };
 
-export default Contact;
+export default Error;

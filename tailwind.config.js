@@ -14,7 +14,8 @@ export default {
       secondary: '#ECE3CE',
       purple: '#32006e',
       gold: '#e8e3d3',
-      'metallic-gold': '#85754d'
+      'metallic-gold': '#85754d',
+      red: '#FF0000',
     },
     fontFamily: {
       sans: ['Satoshi', 'sans-serif'],

@@ -10,6 +10,7 @@ import Competition from './pages/Competition';
 import Team from './pages/Team';
 import Donate from './pages/Donate';
 import Join from './pages/Join';
+import Contact from './pages/Contact';
 import Error from './pages/Error';
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: '/join',
         element: <Join />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
       {
         path: '*',
