@@ -8,6 +8,7 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   label: string;
   icon?: IconType;
   variant?: Variant;
+  isLink?: boolean;
 }
 
 const Button = ({
@@ -20,18 +21,23 @@ const Button = ({
   return (
     <button
       className={twMerge(
-        'px-6 py-3.5 rounded-3xl flex items-center gap-2',
+        'px-5 py-2 rounded-full flex items-center gap-2 transition duration-300 ease-in-out group',
         variant === 'primary'
-          ? 'bg-primary text-white'
+          ? 'bg-primary text-white hover:bg-primary-dark'
           : variant === 'secondary'
-          ? 'text-neutral-100 border border-neutral-100'
+          ? 'text-neutral-100 border border-neutral-300 hover:border-neutral-200 hover:bg-neutral-500'
           : 'text-neutral-100',
         className
       )}
       {...rest}
     >
-      {Icon && <Icon aria-hidden='true' className='shrink-0' />}
       {label}
+      {Icon && (
+        <Icon
+          aria-hidden='true'
+          className='shrink-0 transition duration-300 ease-in-out group-hover:translate-x-1.5'
+        />
+      )}
     </button>
   );
 };

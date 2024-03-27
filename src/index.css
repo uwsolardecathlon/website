@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Satoshi';
+    src: url(../../fonts/Satoshi-Regular.woff) format('woff');
+  }
+}
+
 /* CSS Reset */
 *,
 *::before,
@@ -42,4 +49,9 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/* Container with horizontal constraints */
+.container {
+  @apply px-8 md:px-24 max-w-screen-xl mx-auto;
 }

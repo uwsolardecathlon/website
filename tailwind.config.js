@@ -12,11 +12,12 @@ export default {
       'primary-dark': '#3A4D39',
       'primary-light': '#739072',
       secondary: '#ECE3CE',
+      purple: '#32006e',
     },
     extend: {},
   },
   fontFamily: {
-    sans: ['Inter', 'sans-serif'],
+    sans: ['Satoshi', 'sans-serif'],
   },
   plugins: [],
 };
