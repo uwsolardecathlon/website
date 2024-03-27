@@ -17,7 +17,7 @@ export default {
     extend: {},
   },
   fontFamily: {
-    sans: ['Inter', 'sans-serif'],
+    sans: ['Satoshi', 'sans-serif'],
   },
   plugins: [],
 };
