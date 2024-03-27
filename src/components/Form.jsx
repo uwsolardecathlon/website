@@ -1,13 +1,15 @@
 import React, {FormEvent, useRef} from 'react';
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import {useForm} from 'react-hook-form';
+import emailjs, { EmailJSResponseStatus, send } from '@emailjs/browser';
 import Button from "./Button.tsx";
 
 const Contactform = () => {
 
     const form = useRef(null);
-
+    const {register, formState: {errors}, handleSubmit, reset} = useForm({mode: "all"});
+    //console.log("errors", errors);
     const sendEmail = (e) => {
-        e.preventDefault();
+        //e.preventDefault();
 
         emailjs
         .sendForm('service_1numhhk', 'template_8yqjtfc', form.current, {
@@ -15,7 +17,7 @@ const Contactform = () => {
         })
       .then(
         () => {
-            e.target.reset();
+            reset();
             console.log('SUCCESS!');
         },
         (error) => {
@@ -24,26 +26,41 @@ const Contactform = () => {
         );
     };
 
-
     return (
 
-        <form ref={form} className='flex flex-col gap-10' onSubmit={sendEmail}>
+        <form ref={form} className='flex flex-col gap-10' onSubmit={handleSubmit(sendEmail)}>
             <div className='flex flex-row gap-10'>
                 <div className='flex flex-col gap-3'>
                     <label className='flex flex-row'>First Name <div className='text-red'>*</div></label>
-                    <input className='outline-none' type="text" name="first_name" placeholder="Your first name" />
+                    <input {...register("first_name", {
+                        required: "First name is required"
+                    })}
+                    className='outline-none' type="text" name="first_name" placeholder="Your first name" />
                     <hr className='border-neutral-300'/>
+                    <p className='text-red text-sm'>{errors.first_name?.message}</p>
                 </div>
                 <div className='flex flex-col gap-3'>
                     <label className='flex flex-row'>Last Name <div className='text-red'>*</div></label>
-                    <input className='outline-none' type="text" name="last_name" placeholder="Your last name"/>
+                    <input {...register("last_name", {
+                        required: "Last name is required"
+                    })} 
+                    className='outline-none' type="text" name="last_name" placeholder="Your last name"/>
                     <hr className='border-neutral-300'/>
+                    <p className='text-red text-sm'>{errors.last_name?.message}</p>
                 </div>
             </div>
             <div className='flex flex-col gap-3'>
                     <label className='flex flex-row'>Email <div className='text-red'>*</div></label>
-                    <input className='outline-none' type="text" name="user_email" placeholder="Your email"/>
+                    <input {...register("user_email", {
+                        required: "Email is required",
+                        pattern: {
+                            value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                            message: "Email must be valid",
+                        }
+                    })}
+                    className='outline-none' type="text" name="user_email" placeholder="Your email"/>
                     <hr className='border-neutral-300'/>
+                    <p className='text-red text-sm'>{errors.user_email?.message}</p>
             </div>
             <div className='flex flex-col gap-3'>
                 <label>Message</label>
