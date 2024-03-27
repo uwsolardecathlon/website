@@ -21,20 +21,23 @@ const Button = ({
   return (
     <button
       className={twMerge(
-        'px-5 py-2 rounded-full flex items-center gap-2',
+        'px-5 py-2 rounded-full flex items-center gap-2 transition duration-300 ease-in-out group',
         variant === 'primary'
-          ? 'bg-primary text-white'
+          ? 'bg-primary text-white hover:bg-primary-dark'
           : variant === 'secondary'
-          ? 'text-neutral-100 border border-neutral-100'
-          : variant === 'tertiary'
-          ? 'text-white border-2 border-metallic-gold'
+          ? 'text-neutral-100 border border-neutral-300 hover:border-neutral-200 hover:bg-neutral-500'
           : 'text-neutral-100',
         className
       )}
       {...rest}
     >
       {label}
-      {Icon && <Icon aria-hidden='true' className='shrink-0' />}
+      {Icon && (
+        <Icon
+          aria-hidden='true'
+          className='shrink-0 transition duration-300 ease-in-out group-hover:translate-x-1.5'
+        />
+      )}
     </button>
   );
 };
