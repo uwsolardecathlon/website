@@ -3,11 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: 'Satoshi';
-    src: url(../../fonts/Satoshi-Regular.woff) format('woff');
-  }
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
 }
 
 /* CSS Reset */
@@ -22,6 +20,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: Satoshi;
 }
 img,
 picture,
