@@ -7,7 +7,7 @@ const Root = () => {
   return (
     <>
       <Navbar />
-      <main className='py-20 px-8 md:px-24 max-w-screen-xl m-auto'>
+      <main className='pt-20'>
         <Outlet />
       </main>
       <Footer />
