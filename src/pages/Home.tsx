@@ -40,8 +40,8 @@ const Home = () => {
             </Subtitle2>
             <Button
               label='View the challenge'
-              variant='tertiary'
-              className='w-fit border-white'
+              variant='secondary'
+              className='w-fit border-white text-white'
             />
           </div>
         </div>
