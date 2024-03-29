@@ -37,7 +37,7 @@ function Navbar() {
             <NavItem label='contact' />
             <li>
               <NavLink to='/join' tabIndex={-1}>
-                <Button label='join' variant='primary' className='uppercase' />
+                <Button label='join' variant='primary' className='capitalize' />
               </NavLink>
             </li>
           </ul>

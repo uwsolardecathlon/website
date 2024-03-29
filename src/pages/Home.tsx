@@ -11,7 +11,7 @@ const Home = () => {
       <section className='flex flex-col gap-20 mt-40 container'>
         <div className='flex flex-col gap-7'>
           <H1>UW Solar Decathlon</H1>
-          <Subtitle1>
+          <Subtitle1 className='max-w-sm'>
             Building a sustainable future at the University of Washington
           </Subtitle1>
           <Button
@@ -40,8 +40,8 @@ const Home = () => {
             </Subtitle2>
             <Button
               label='View the challenge'
-              variant='tertiary'
-              className='w-fit border-white'
+              variant='secondary'
+              className='w-fit border-white text-white'
             />
           </div>
         </div>
