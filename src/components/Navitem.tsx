@@ -6,7 +6,7 @@ function NavItem({ label }: { label: string }) {
       <NavLink
         to={`/${label === 'home' ? '' : label}`}
         className={
-          'transition ease-in duration-300 hover:text-purple hover:scale-110 uppercase'
+          'transition ease-in duration-300 hover:text-purple hover:scale-110 capitalize'
         }
       >
         {label}
