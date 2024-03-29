@@ -1,17 +1,22 @@
 import Button from '../components/Button.tsx';
 import H1 from '../components/text/H1';
 import H2 from '../components/text/H2';
+import PageHeader from '../components/PageHeader.tsx';
 
 const Donate = () => {
   return (
-    <>
-      <section className='flex flex-col gap-20 mt-40 container'>
-        <H1>Support</H1>
-      </section>
+    <div className='my-28'>
+      <PageHeader
+        title='Donate'
+        subtitle='The University of Washington Solar Decathlon Club looks
+        to engage students to innovative learning through events, research
+        and participating within the competition, especially when flying
+        students over to Colorado.'
+        imageSrc='/images/about_hero.png'
+        imageAlt='altText'
+      />
 
-      <br />
-
-      <section className='flex flex-row my-28 gap-20 items-center container'>
+      <section className='flex flex-row gap-20 items-center container'>
         <div className='flex flex-col gap-7'>
           <H2>Donate</H2>
           <p>
@@ -31,7 +36,7 @@ const Donate = () => {
           alt='Image of Gould Hall (change later)'
         />
       </section>
-    </>
+    </div>
   );
 };
 
