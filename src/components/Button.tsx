@@ -9,6 +9,7 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: IconType;
   variant?: Variant;
   isLink?: boolean;
+  type?: 'submit' | 'reset' | 'button' | undefined;
 }
 
 const Button = ({
@@ -16,6 +17,7 @@ const Button = ({
   icon: Icon,
   variant = 'primary',
   className,
+  type,
   ...rest
 }: ButtonProps) => {
   return (
@@ -29,6 +31,7 @@ const Button = ({
           : 'text-neutral-100',
         className
       )}
+      type={type ?? undefined}
       {...rest}
     >
       {label}
