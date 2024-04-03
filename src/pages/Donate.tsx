@@ -1,5 +1,4 @@
 import Button from '../components/Button.tsx';
-import H1 from '../components/text/H1';
 import H2 from '../components/text/H2';
 import PageHeader from '../components/PageHeader.tsx';
 
