@@ -58,6 +58,8 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+
+      {/*Mobile*/}
       <footer className='block md:hidden bg-neutral-100 text-white py-12 px-8 capitalize'>
         <div className='flex w-full flex-col justify-between pb-10'>
           <NavLink to='/'>
