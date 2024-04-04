@@ -25,7 +25,7 @@ const Competition = () => {
           className="max-h-[40rem]"
         />
       </section> */}
-      <section className='flex flex-row mt-28 gap-20 items-center'>
+      <section className='flex flex-row mt-28 gap-20 items-center container'>
         <div className='flex flex-col gap-12'>
           <div className='flex flex-col gap-5'>
             <Subtitle2>BACKGROUND</Subtitle2>
@@ -69,10 +69,10 @@ const Competition = () => {
           </p>
         </div>
       </section>
-      <section className='flex flex-col gap-7 mt-28'>
+      <section className='flex flex-col gap-7 mt-28 container'>
         <Subtitle2>Something</Subtitle2>
         <H2>Project Timeline</H2>
-        <ul className='flex flex-row justify-between'>
+        <ul className='flex flex-row justify-between flex-wrap'>
           <TLItem
             label='Project Summary'
             number='1'
