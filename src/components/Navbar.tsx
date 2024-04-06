@@ -46,7 +46,7 @@ function Navbar() {
 
       {/* Mobile */}
       <div className='flex flex-col items-center lg:hidden bg-white'>
-        <div className='flex w-full h-[10vh] justify-between items-center px-8 py-4 md:px-24'>
+        <div className='flex w-screen h-[10vh] justify-between items-center px-8 py-4 md:px-24'>
           <img src='/images/logo.svg' alt='' className='h-10' />
           <Hamburger
             direction='right'
