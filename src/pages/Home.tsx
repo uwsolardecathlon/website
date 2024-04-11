@@ -48,9 +48,9 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className='flex space-between gap-24 container'>
+        <section className='flex space-between gap-[7vw] container'>
           <img
-            className='h-auto w-auto py-20'
+            className='h-auto w-auto py-20 object-cover'
             src='/images/home_our_team.png'
             alt='our team image'
           ></img>
