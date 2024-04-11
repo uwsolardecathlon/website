@@ -29,7 +29,7 @@ const Home = () => {
             className='max-h-[40rem]'
           />
         </section>
-        <section className=' bg-primary-dark text-white py-24 px-20 gap-24 mt-20'>
+        <section className=' bg-primary-dark text-white py-20 px-20 gap-24 mt-20'>
           <div className='container flex flex-row'>
             <H2 className='text-white'>
               Our mission is to design and build energy-efficient, low-carbon
@@ -52,7 +52,7 @@ const Home = () => {
           <img
             className='h-auto w-auto py-20'
             src='/images/home_our_team.png'
-            alt='our_team_image'
+            alt='our team image'
           ></img>
           <div className='flex flex-col gap-6 py-28'>
             <H2>Our Team</H2>
@@ -88,8 +88,8 @@ const Home = () => {
       </article>
 
       {/* Mobile */}
-      <article className='lg:hidden w-full'>
-        <section className='flex flex-col gap-20 mt-32 items-center container'>
+      <article className='lg:hidden flex flex-col md:gap-20 gap-16 w-full'>
+        <section className='flex flex-col gap-20 md:mt-32 mt-24 items-center container'>
           <div className='flex flex-col gap-7 items-center'>
             <H1 className='text-center'>UW Solar Decathlon</H1>
             <Subtitle1 className='max-w-sm text-center'>
@@ -108,7 +108,7 @@ const Home = () => {
             className='max-h-[40rem]'
           />
         </section>
-        <section className=' bg-primary-dark text-white py-24 lg:px-20 px-14 gap-24 mt-20'>
+        <section className=' bg-primary-dark text-white md:py-20 py-16 md:px-17 px-5 gap-24'>
           <div className='container flex flex-col gap-7'>
             <H2 className='text-white'>
               Our mission is to design and build energy-efficient, low-carbon
@@ -127,9 +127,9 @@ const Home = () => {
         </section>
         <section className='flex flex-col container'>
           <img
-            className='h-auto w-auto py-20'
+            className='h-auto w-auto pb-14'
             src='/images/home_our_team.png'
-            alt='our_team_image'
+            alt='our team image'
           ></img>
           <div className='flex flex-col gap-6'>
             <H2>Our Team</H2>
@@ -149,8 +149,8 @@ const Home = () => {
           </div>
         </section>
 
-        <section className='flex flex-col bg-neutral-400 items-center p-20 mt-20'>
-          <div className='flex flex-col items-center gap-4 w-1/2'>
+        <section className='flex flex-col bg-neutral-400 items-center md:p-20 p-14'>
+          <div className='flex flex-col items-center gap-4 lg:w-1/2 w-full'>
             <H2>Get Involved</H2>
             <p className='text-wrap text-center'>
               We accept any and all students to join our group. Find out how to
