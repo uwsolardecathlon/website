@@ -60,12 +60,12 @@ function Navbar() {
             <animated.ul
               style={style}
               className={
-                'item flex relative opacity-10 text-xl w-full h-[90vh] justify-items-center justify-around flex-wrap flex-col bg-white'
+                'item flex relative opacity-10 text-xl w-full h-[90vh] justify-items-center justify-evenly flex-wrap flex-col bg-white'
               }
             >
-              <NavItem label='home' />
+              <NavItem label='home' onClick={() => setShow(!show)} />
               <NavItem label='team' />
-              <NavItem label='competition' />
+              <NavItem label='competition' onClick={() => setShow(!show)}/>
               <NavItem label='donate' />
               <NavItem label='join' />
             </animated.ul>
