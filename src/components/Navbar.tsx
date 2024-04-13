@@ -64,6 +64,7 @@ function Navbar() {
               }
             >
               <NavItem label='home' />
+              <NavItem label='about' />
               <NavItem label='team' />
               <NavItem label='competition' />
               <NavItem label='donate' />

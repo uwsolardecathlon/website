@@ -1,5 +1,4 @@
 import H2 from '../components/text/H2.tsx';
-import Subtitle2 from '../components/text/Subtitle2.tsx';
 import PageHeader from '../components/PageHeader.tsx';
 
 const About = () => {
@@ -10,9 +9,8 @@ const About = () => {
         subtitle='Learn about the history of our team and what we do.'
         imageSrc='/images/about_hero.png'
       />
-      <section className='flex flex-row gap-20 items-center container'>
+      <section className='lg:flex block gap-20 items-center container'>
         <div className='flex flex-col gap-7'>
-          <Subtitle2>WHO WE ARE</Subtitle2>
           <H2>Competition Origins</H2>
           <div className='flex flex-col gap-5'>
             <p>
@@ -38,30 +36,32 @@ const About = () => {
           </div>
         </div>
         <img
-          className='h-auto max-w-[555px]'
+          className='mt-10 h-auto lg:max-w-[555px]'
           src='/images/about_origin.png'
           alt='image of Gould Hall'
         />
       </section>
-      <section className='flex flex-row mt-28 gap-20 items-center container'>
+      <section className='lg:flex block mt-28 gap-20 items-center container'>
         <img
-          className='h-auto max-w-[555px]'
+          className='h-auto lg:max-w-[555px]'
           src='/images/about_origin.png'
           alt='image of Gould Hall'
         />
         <div className='flex flex-col gap-7'>
-          <Subtitle2>WHAT WE DO</Subtitle2>
-          <H2>Some Short Tagline</H2>
+          <H2>Reaching Net Zero</H2>
           <div className='flex flex-col gap-5'>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quod, voluptate, quia, voluptates quas voluptatibus quibusdam quae
-              quidem quos quas voluptatibus quibusdam quae.
+              The Paris Agreement was a document signed by over 190 countries in 
+              2015 to reduce carbon emissions by 45% by 2030 and achieve net zero 
+              by 2050. Since buildings account for approximately 35% of carbon
+              emissions in the US and 40% of its energy usage, the Solar Decathlon 
+              challenges students to design low-carbon, net zero energy homes for 
+              disadvantaged communities.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quod, voluptate, quia, voluptates quas voluptatibus quibusdam quae
-              quidem quos quas voluptatibus quibusdam quae.
+              For students preparing to join the clean energy workforce, the Solar
+              Decathlon is an excellent opportunity to gain real-life experience
+              designing buildings for a more sustainable world.
             </p>
           </div>
         </div>
