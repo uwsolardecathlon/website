@@ -1,3 +1,4 @@
+import H1 from "../components/text/H2.tsx";
 import H2 from "../components/text/H2.tsx";
 import Subtitle2 from "../components/text/Subtitle2.tsx";
 import TLItem from "../components/Timelineitem.tsx";
@@ -5,6 +6,8 @@ import PageHeader from "../components/PageHeader.tsx";
 
 const Competition = () => {
   return (
+    <nav className="">
+      {/* Desktop
     <div className="my-28">
       <PageHeader
         title="Competition"
@@ -24,7 +27,7 @@ const Competition = () => {
           alt="picture of Solar Decathlon event"
           className="max-h-[40rem]"
         />
-      </section> */}
+      </section>
       <section className="flex flex-row mt-28 gap-20 items-center">
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-5">
@@ -110,7 +113,74 @@ const Competition = () => {
           />
         </ul>
       </section>
-    </div>
+    </div> */}
+
+      {/*Mobile*/}
+      <div className="flex flex-col items-center pt-20 gap-20">
+        <section className="flex flex-col gap-20 items-center container">
+          <H1 className="scale-150 font-black">Competition</H1>
+          <Subtitle2>
+            Learn about the Solar Decathlon and the work we do throughout the
+            year.
+          </Subtitle2>
+          <img
+            className="h-auto w-auto"
+            src="/images/home_hero.png"
+            alt="image of Solar Decathlon event"
+          />
+        </section>
+        <section className="flex items-center container">
+          <div className="flex flex-col gap-7">
+            <H2>Solar Decathlon</H2>
+            <div className="flex flex-col">
+              <p>
+                The Solar Decathlon is a collegiate competition sponsored by the
+                US Department of Energy, consisting of a Design Challenge and a
+                Build Challenge. We participate in the annual Design Challenge,
+                which entails designing a high-performance, low-carbon building
+                to address a real-world issue. Teams register in October,
+                compete in the semifinals in February, then finalists present
+                their design to the National Renewable Energy Laboratory in
+                Colorado. Each design is graded on 10 contests that are
+                developed each year to inspire teams to learn new innovative
+                techniques for designing net zero energy buildings.
+              </p>
+            </div>
+            <img
+              className="h-auto w-auto"
+              src="/images/competition_drawing.png"
+            />
+          </div>
+        </section>
+        <section className="flex flex-col gap-20 items-center container bg-slate-500">
+          <div className="flex flex-col gap-7 pb-20">
+            <H2>Designing a Net Zero Energy Home</H2>
+            <div className="flex flex-col gap-5">
+              <p>
+                When designing a net zero energy home, there are many factors to
+                consider. Who are you designing your building for? What is the
+                peak load of your building? Is it environmentally friendly?
+                These questions and many others are asked by the jury to
+                determine who wins the competition. In Washington State, it is
+                simple to design a building with low operational carbon as the
+                weather of Washington is around the average comfort level of 65
+                degrees Fahrenheit. When it comes to designing a new building,
+                the biggest concern is embodied carbon.
+              </p>
+              <p>
+                Embodied carbon is the carbon dioxide (CO₂) emissions associated
+                with materials and construction processes throughout the entire
+                life-cycle of a building or infrastructure. By minimizing the
+                embodied carbon of a building, you can create the most
+                sustainable buildings in the world. For some buildings, you
+                could even store carbon from the atmosphere to reduce the
+                effects of global warming.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </nav>
   );
 };
 

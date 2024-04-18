@@ -74,7 +74,7 @@ const About = () => {
       {/*Mobile*/}
       <div className="flex flex-col items-center pt-20 gap-20">
         <section className="flex flex-col gap-20 items-center container">
-          <H1 className="scale-150">About</H1>
+          <H1 className="scale-150 font-black">About</H1>
           <Subtitle2>
             Learn about the history of our team and what we do.
           </Subtitle2>
