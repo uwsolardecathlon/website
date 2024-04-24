@@ -158,7 +158,6 @@ const Competition = () => {
           </p>
         </section>
         <section className='flex flex-col gap-7 container'>
-          <Subtitle2>Something</Subtitle2>
           <H2>Project Timeline</H2>
           <ul className='flex flex-col flex-wrap'>
             <TLItem
