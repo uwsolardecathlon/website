@@ -31,51 +31,52 @@ const Form = () => {
 
   return (
     <form
+      id='contact-form'
       ref={form}
       className='flex flex-col gap-10'
       onSubmit={handleSubmit(sendEmail)}
     >
       <div className='flex flex-row gap-10'>
         <div className='flex flex-col gap-3'>
-          <label className='flex flex-row'>
-            First Name <div className='text-red'>*</div>
+          <label>
+            First Name <span className='text-red'>*</span>
           </label>
           <input
             {...register('first_name', {
               required: 'First name is required',
             })}
-            className='outline-none'
+            className='outline-none pb-3 pl-1 border-solid border-b border-b-neutral-300
+            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
             type='text'
             name='first_name'
             placeholder='Your first name'
           />
-          <hr className='border-neutral-300' />
           <p className='text-red text-sm'>
             {errors.first_name?.message as string}
           </p>
         </div>
         <div className='flex flex-col gap-3'>
-          <label className='flex flex-row'>
-            Last Name <div className='text-red'>*</div>
+          <label>
+            Last Name <span className='text-red'>*</span>
           </label>
           <input
             {...register('last_name', {
               required: 'Last name is required',
             })}
-            className='outline-none'
+            className='outline-none pb-3 pl-1 border-solid border-b border-b-neutral-300
+            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
             type='text'
             name='last_name'
             placeholder='Your last name'
           />
-          <hr className='border-neutral-300' />
           <p className='text-red text-sm'>
             {errors.last_name?.message as string}
           </p>
         </div>
       </div>
       <div className='flex flex-col gap-3'>
-        <label className='flex flex-row'>
-          Email <div className='text-red'>*</div>
+        <label>
+          Email <span className='text-red'>*</span>
         </label>
         <input
           {...register('user_email', {
@@ -86,12 +87,12 @@ const Form = () => {
               message: 'Email must be valid',
             },
           })}
-          className='outline-none'
+          className='outline-none pb-3 pl-1 border-solid border-b border-b-neutral-300
+          focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
           type='text'
           name='user_email'
           placeholder='Your email'
         />
-        <hr className='border-neutral-300' />
         <p className='text-red text-sm'>
           {errors.user_email?.message as string}
         </p>
@@ -99,12 +100,12 @@ const Form = () => {
       <div className='flex flex-col gap-3'>
         <label>Message</label>
         <textarea
-          className='outline-none'
+          className='outline-none pb-3 border-solid border-b border-b-neutral-300
+          focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
           rows={4}
           name='message'
           placeholder='Enter a message'
         />
-        <hr className='border-neutral-300' />
       </div>
       <Button className='w-fit' label='Submit' type='submit' />
     </form>
