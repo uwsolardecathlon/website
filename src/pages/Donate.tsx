@@ -1,9 +1,6 @@
 import Button from "../components/Button.tsx";
 import H2 from "../components/text/H2";
 import PageHeader from "../components/PageHeader.tsx";
-import Subtitle2 from "../components/text/Subtitle2.tsx";
-import TLItem from "../components/Timelineitem.tsx";
-import TLContent from "../components/Timelinecontent.tsx";
 
 const Donate = () => {
   return (
@@ -32,7 +29,7 @@ const Donate = () => {
             </div>
           </div>
           <img
-            className="h-auto max-w-[555px]"
+            className="max-h-[480px] max-w-[555px] object-cover"
             src="/images/donate_image.png"
             alt="People in front of donate table."
           />
