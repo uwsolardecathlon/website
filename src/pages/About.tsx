@@ -6,7 +6,7 @@ import PageHeader from "../components/PageHeader.tsx";
 const About = () => {
   return (
     <nav className="">
-      {/* DeskTop
+      {/* DeskTop */}
       <div className="my-28">
         <PageHeader
           title="About"
@@ -69,7 +69,7 @@ const About = () => {
             </div>
           </div>
         </section>
-      </div> */}
+      </div>
 
       {/*Mobile*/}
       <div className="flex flex-col items-center pt-20 gap-20">
