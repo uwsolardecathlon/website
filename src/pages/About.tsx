@@ -11,42 +11,28 @@ const About = () => {
       />
       <section className='lg:flex block gap-20 items-center container'>
         <div className='flex flex-col gap-7'>
-          <H2>Competition Origins</H2>
+          <H2>Team History</H2>
           <div className='flex flex-col gap-5'>
             <p>
-              The Paris Agreement is a document signed by various countries in
-              2015 to reduce usage to 45% by the end of 2030. The goal for the
-              United States is to reduce carbon emissions to zero by 2050. As a
-              push for that goal, the Solar Decathlon competition seeks to train
-              students to join the clean energy workforce. Buildings use
-              approximately 30% of the US’s total energy usage. To reach a net
-              zero carbon goal by 2050, the Solar Decathlon is looking to train
-              students by designing net zero energy homes for disadvantaged
-              communities.
+              Founded by a student in Autumn 2023, the University of Washington
+              Solar Decathlon team is the first Building Science RSO on campus.
+              Our team consists of students across various majors, all with a
+              passion for renewable energy.
             </p>
             <p>
-              The University of Washington Solar Decathlon team started in
-              Autumn 2023 when a student developed the idea to start the first
-              ever Building Science RSO on campus. Starting off with small group
-              meetings at Gould Hall, the club has grown into a group that
-              learns about innovative energy techniques each day. With Faculty
-              Lead Rob Pena backing the team, the Solar Decathlon group has a
-              great backing for future competitions.
+              first competed in the 2024 Solar Decathlon as a team of 20 students.
+              With the support of our faculty lead, Rob Pena, we look forward to
+              future competitions and the continued growth of our club!
             </p>
           </div>
         </div>
         <img
-          className='mt-10 h-auto lg:max-w-[555px]'
+          className='mt-10 h-auto align lg:max-w-md'
           src='/images/about_origin.png'
           alt='image of Gould Hall'
         />
       </section>
-      <section className='lg:flex block mt-28 gap-20 items-center container'>
-        <img
-          className='h-auto lg:max-w-[555px]'
-          src='/images/about_origin.png'
-          alt='image of Gould Hall'
-        />
+      <section className='lg:flex block mt-10 gap-20 items-center container'>
         <div className='flex flex-col gap-7'>
           <H2>Reaching Net Zero</H2>
           <div className='flex flex-col gap-5'>
@@ -65,6 +51,11 @@ const About = () => {
             </p>
           </div>
         </div>
+        <img
+          className='h-auto mt-10 lg:max-w-md lg:order-first'
+          src='/images/about_origin.png'
+          alt='image of Gould Hall'
+        />
       </section>
     </div>
   );
