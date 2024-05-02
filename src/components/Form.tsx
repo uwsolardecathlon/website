@@ -30,13 +30,95 @@ const Form = () => {
   };
 
   return (
-    <form
-      id='contact-form'
-      ref={form}
-      className='flex flex-col gap-10'
-      onSubmit={handleSubmit(sendEmail)}
-    >
-      <div className='flex flex-row gap-10'>
+    <>
+      {/* Desktop */}
+      <form
+        id='contact-form'
+        ref={form}
+        className='lg:flex hidden flex-col gap-10'
+        onSubmit={handleSubmit(sendEmail)}
+      >
+        <div className='flex flex-row gap-10'>
+          <div className='flex flex-col gap-3'>
+            <label>
+              First Name <span className='text-red'>*</span>
+            </label>
+            <input
+              {...register('first_name', {
+                required: 'First name is required',
+              })}
+              className='outline-none pb-3 border-solid border-b border-b-neutral-300
+              focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
+              type='text'
+              name='first_name'
+              placeholder='Your first name'
+            />
+            <p className='text-red text-sm'>
+              {errors.first_name?.message as string}
+            </p>
+          </div>
+          <div className='flex flex-col gap-3'>
+            <label>
+              Last Name <span className='text-red'>*</span>
+            </label>
+            <input
+              {...register('last_name', {
+                required: 'Last name is required',
+              })}
+              className='outline-none pb-3 border-solid border-b border-b-neutral-300
+              focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
+              type='text'
+              name='last_name'
+              placeholder='Your last name'
+            />
+            <p className='text-red text-sm'>
+              {errors.last_name?.message as string}
+            </p>
+          </div>
+        </div>
+        <div className='flex flex-col gap-3'>
+          <label>
+            Email <span className='text-red'>*</span>
+          </label>
+          <input
+            {...register('user_email', {
+              required: 'Email is required',
+              pattern: {
+                value:
+                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                message: 'Email must be valid',
+              },
+            })}
+            className='outline-none pb-3 border-solid border-b border-b-neutral-300
+            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
+            type='text'
+            name='user_email'
+            placeholder='Your email'
+          />
+          <p className='text-red text-sm'>
+            {errors.user_email?.message as string}
+          </p>
+        </div>
+        <div className='flex flex-col gap-3'>
+          <label>Message</label>
+          <textarea
+            className='outline-none pb-3 border-solid border-b border-b-neutral-300
+            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
+            rows={4}
+            name='message'
+            placeholder='Enter a message'
+          />
+        </div>
+        <Button className='w-fit' label='Submit' type='submit' />
+      </form>
+
+      {/* Mobile */}
+      <form
+        id='contact-form'
+        ref={form}
+        className='flex flex-col gap-10 lg:hidden items-center'
+        onSubmit={handleSubmit(sendEmail)}
+      >
         <div className='flex flex-col gap-3'>
           <label>
             First Name <span className='text-red'>*</span>
@@ -45,8 +127,8 @@ const Form = () => {
             {...register('first_name', {
               required: 'First name is required',
             })}
-            className='outline-none pb-3 pl-1 border-solid border-b border-b-neutral-300
-            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
+            className='outline-none pb-3 border-solid border-b border-b-neutral-300
+            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200 w-[80vw]'
             type='text'
             name='first_name'
             placeholder='Your first name'
@@ -64,7 +146,7 @@ const Form = () => {
               required: 'Last name is required',
             })}
             className='outline-none pb-3 pl-1 border-solid border-b border-b-neutral-300
-            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
+            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200 w-[80vw]'
             type='text'
             name='last_name'
             placeholder='Your last name'
@@ -73,42 +155,42 @@ const Form = () => {
             {errors.last_name?.message as string}
           </p>
         </div>
-      </div>
-      <div className='flex flex-col gap-3'>
-        <label>
-          Email <span className='text-red'>*</span>
-        </label>
-        <input
-          {...register('user_email', {
-            required: 'Email is required',
-            pattern: {
-              value:
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              message: 'Email must be valid',
-            },
-          })}
-          className='outline-none pb-3 pl-1 border-solid border-b border-b-neutral-300
-          focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
-          type='text'
-          name='user_email'
-          placeholder='Your email'
-        />
-        <p className='text-red text-sm'>
-          {errors.user_email?.message as string}
-        </p>
-      </div>
-      <div className='flex flex-col gap-3'>
-        <label>Message</label>
-        <textarea
-          className='outline-none pb-3 border-solid border-b border-b-neutral-300
-          focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200'
-          rows={4}
-          name='message'
-          placeholder='Enter a message'
-        />
-      </div>
-      <Button className='w-fit' label='Submit' type='submit' />
-    </form>
+        <div className='flex flex-col gap-3'>
+          <label>
+            Email <span className='text-red'>*</span>
+          </label>
+          <input
+            {...register('user_email', {
+              required: 'Email is required',
+              pattern: {
+                value:
+                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                message: 'Email must be valid',
+              },
+            })}
+            className='outline-none pb-3 border-solid border-b border-b-neutral-300
+            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200 w-[80vw]'
+            type='text'
+            name='user_email'
+            placeholder='Your email'
+          />
+          <p className='text-red text-sm'>
+            {errors.user_email?.message as string}
+          </p>
+        </div>
+        <div className='flex flex-col gap-3'>
+          <label>Message</label>
+          <textarea
+            className='outline-none pb-3 border-solid border-b border-b-neutral-300
+            focus:border-b-primary-light focus:shadow-md shadow-primary-dark ease-in duration-200 w-[80vw]'
+            rows={4}
+            name='message'
+            placeholder='Enter a message'
+          />
+        </div>
+        <Button className='w-fit' label='Submit' type='submit' />
+      </form>
+    </>
   );
 };
 

@@ -69,6 +69,7 @@ function Navbar() {
               <NavItem label='team' onClick={() => setShow(!show)}/>
               <NavItem label='competition' onClick={() => setShow(!show)}/>
               <NavItem label='donate' onClick={() => setShow(!show)}/>
+              <NavItem label='contact' onClick={() => setShow(!show)}/>
               <NavItem label='join' onClick={() => setShow(!show)}/>
             </animated.ul>
           ) : (
