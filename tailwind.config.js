@@ -13,6 +13,7 @@ export default {
       'primary-light': '#739072',
       secondary: '#ECE3CE',
       purple: '#32006e',
+      red: '#FF0000',
     },
     extend: {},
   },

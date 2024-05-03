@@ -8,11 +8,11 @@ import { NavLink, Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <>
-      <footer className='w-full bg-neutral-100  text-white uppercase'>
+      <footer className='w-full bg-neutral-100  text-white capitalize'>
         <div className='hidden md:flex flex-col px-24 py-16 max-w-screen-xl mx-auto'>
           <div className='flex flex-row w-full justify-between items-center pb-10'>
             <NavLink to='/'>
-              <img src='/images/logo_inverse.svg' alt='' className='w-12' />
+              <img src='/images/logo.svg' alt='' className='w-16' />
             </NavLink>
             <ul className='flex flex-row gap-6'>
               <li>
@@ -58,10 +58,12 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <footer className='block md:hidden bg-neutral-100 text-white py-12 px-8 uppercase'>
+
+      {/*Mobile*/}
+      <footer className='block md:hidden bg-neutral-100 text-white py-12 px-8 capitalize'>
         <div className='flex w-full flex-col justify-between pb-10'>
           <NavLink to='/'>
-            <img src='/images/logo_inverse.svg' alt='' className='w-12 pb-10' />
+            <img src='/images/logo.svg' alt='' className='w-16 pb-10' />
           </NavLink>
           <ul className='flex gap-4 flex-row'>
             <div className='flex flex-col w-full justify-between gap-6'>

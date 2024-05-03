@@ -19,14 +19,10 @@ function Navbar() {
   return (
     <nav className='fixed w-full z-50'>
       {/* Desktop */}
-      <div
-        className={twMerge(
-          'mx-0 items-center ease-in-out duration-150 bg-white'
-        )}
-      >
-        <div className='hidden lg:flex flex-row justify-between gap-17 px-24 py-5 max-w-screen-xl mx-auto'>
+      <div className={twMerge('mx-0 ease-in-out duration-150 bg-white')}>
+        <div className='hidden lg:flex flex-row justify-between items-center gap-17 px-24 py-5 max-w-screen-xl mx-auto'>
           <NavLink to='/' className='shrink-0'>
-            <img src='/images/logo.svg' alt='' className='w-12' />
+            <img src='/images/logo.svg' alt='' className='w-16' />
           </NavLink>
           <ul className={'flex flex-row justify-between gap-8'}>
             <NavItem label='home' />
@@ -37,7 +33,7 @@ function Navbar() {
             <NavItem label='contact' />
             <li>
               <NavLink to='/join' tabIndex={-1}>
-                <Button label='join' variant='primary' className='uppercase' />
+                <Button label='join' variant='primary' className='capitalize' />
               </NavLink>
             </li>
           </ul>
@@ -46,8 +42,10 @@ function Navbar() {
 
       {/* Mobile */}
       <div className='flex flex-col items-center lg:hidden bg-white'>
-        <div className='flex w-full justify-between items-center px-8 py-4 md:px-24'>
-          <img src='/images/logo.svg' alt='' className='h-10' />
+        <div className='flex w-screen h-[10vh] justify-between items-center px-8 py-4 md:px-24'>
+          <NavLink to='/' className='shrink-0'>
+            <img src='/images/logo.svg' alt='' className='w-16' />
+          </NavLink>
           <Hamburger
             direction='right'
             toggle={setShow}
@@ -60,15 +58,14 @@ function Navbar() {
             <animated.ul
               style={style}
               className={
-                'item flex relative opacity-10 text-xl w-full h-[90vh] justify-items-center justify-around flex-wrap flex-col bg-white'
+                'item flex relative opacity-10 text-xl w-full h-[90vh] justify-items-center justify-evenly flex-wrap flex-col bg-white'
               }
             >
-              <NavItem label='home' />
-              <NavItem label='about' />
-              <NavItem label='team' />
-              <NavItem label='competition' />
-              <NavItem label='donate' />
-              <NavItem label='join' />
+              <NavItem label='home' onClick={() => setShow(!show)} />
+              <NavItem label='team' onClick={() => setShow(!show)} />
+              <NavItem label='competition' onClick={() => setShow(!show)} />
+              <NavItem label='donate' onClick={() => setShow(!show)} />
+              <NavItem label='join' onClick={() => setShow(!show)} />
             </animated.ul>
           ) : (
             ''
