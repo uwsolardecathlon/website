@@ -4,10 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import H3 from './text/H3';
 
-export interface AccordionPanelProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface AccordionPanelProps {
   title: string;
-  content: string;
+  content: React.ReactNode;
 }
 
 const AccordionPanel = ({ title, content }: AccordionPanelProps) => {
@@ -59,7 +58,7 @@ const AccordionPanel = ({ title, content }: AccordionPanelProps) => {
               ease: [0.23, 1, 0.32, 1],
             }}
           >
-            <motion.p
+            <motion.div
               className='pb-4'
               initial='hidden'
               animate='visible'
@@ -72,7 +71,7 @@ const AccordionPanel = ({ title, content }: AccordionPanelProps) => {
               }}
             >
               {content}
-            </motion.p>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

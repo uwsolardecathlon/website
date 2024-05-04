@@ -4,9 +4,9 @@ interface AccordionProps extends React.HTMLAttributes<HTMLUListElement> {
   panels: AccordionPanelProps[];
 }
 
-const Accordion = ({ panels }: AccordionProps) => {
+const Accordion = ({ panels, className, ...rest }: AccordionProps) => {
   return (
-    <ul>
+    <ul className={className} {...rest}>
       {panels.map((panel, index) => (
         <li key={index}>
           <AccordionPanel {...panel} />
