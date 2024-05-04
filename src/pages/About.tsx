@@ -9,8 +9,8 @@ const About = () => {
         subtitle='Learn about the history of our team and what we do.'
         imageSrc='/images/about_hero.png'
       />
-      <section className='lg:flex block gap-20 items-center container'>
-        <div className='flex flex-col gap-7'>
+      <section className='lg:flex block mt-10 items-center container'>
+        <div className='flex flex-col gap-4 lg:w-1/2 lg:pr-20'>
           <H2>Team History</H2>
           <div className='flex flex-col gap-5'>
             <p>
@@ -27,13 +27,13 @@ const About = () => {
           </div>
         </div>
         <img
-          className='mt-10 h-auto align lg:max-w-md'
+          className='mt-10 h-auto align lg:w-1/2'
           src='/images/about_origin.png'
           alt='image of Gould Hall'
         />
       </section>
-      <section className='lg:flex block mt-10 gap-20 items-center container'>
-        <div className='flex flex-col gap-7'>
+      <section className='lg:flex block mt-10 items-center container'>
+        <div className='flex flex-col gap-4 lg:w-1/2 lg:pl-20'>
           <H2>Reaching Net Zero</H2>
           <div className='flex flex-col gap-5'>
             <p>
@@ -52,7 +52,7 @@ const About = () => {
           </div>
         </div>
         <img
-          className='h-auto mt-10 lg:max-w-md lg:order-first'
+          className='h-auto mt-10 lg:order-first lg:w-1/2'
           src='/images/about_origin.png'
           alt='image of Gould Hall'
         />

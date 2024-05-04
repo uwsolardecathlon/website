@@ -7,16 +7,14 @@ const Donate = () => {
     <div className='my-28'>
       <PageHeader
         title='Donate'
-        subtitle='The University of Washington Solar Decathlon Club looks
-        to engage students to innovative learning through events, research
-        and participating within the competition, especially when flying
-        students over to Colorado.'
+        subtitle='Your donations will help fund our events, research,
+        and participation in the Solar Decathlon Competition.'
         imageSrc='/images/about_hero.png'
         imageAlt='altText'
       />
 
-      <section className='flex flex-row gap-20 items-center container'>
-        <div className='flex flex-col gap-7'>
+      <section className='lg:flex block mt-10 items-center container'>
+        <div className='flex flex-col gap-7 lg:w-1/2 lg:pr-20'>
           <H2>Donate</H2>
           <p>
             We are extremely grateful to those who have supported our journey so
@@ -30,7 +28,7 @@ const Donate = () => {
           </div>
         </div>
         <img
-          className='h-auto max-w-[555px]'
+          className='mt-10 h-auto align lg:w-1/2'
           src='/images/about_origin.png'
           alt='Image of Gould Hall (change later)'
         />

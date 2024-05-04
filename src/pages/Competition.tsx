@@ -49,7 +49,7 @@ const Competition = () => {
             className="max-h-[40rem]"
           />
         </section> */}
-        <section className='flex flex-row mt-28 gap-20 items-center container'>
+        <section className='flex flex-row mt-10 gap-20 items-center container'>
           <div className='flex flex-col gap-12'>
             <div className='flex flex-col gap-5'>
               <Subtitle2>BACKGROUND</Subtitle2>
