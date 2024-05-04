@@ -6,30 +6,42 @@ import TLContent from '../components/Timelinecontent.tsx';
 
 const Competition = () => {
   const phase1 = (
-    <TLContent 
+    <TLContent
       top='We start by devising a project that targets an issue in Washington relating to climate change, affordability, or environmental justice. This involves:'
-      list={["Conducting a site analysis", "Designing a building that follows passive design strategies and meets the needs of the target market", "Running energy modeling, embodied carbon analysis, financial analysis"]}
+      list={[
+        'Conducting a site analysis',
+        'Designing a building that follows passive design strategies and meets the needs of the target market',
+        'Running energy modeling, embodied carbon analysis, financial analysis',
+      ]}
       bottom='Though optional, it is highly recommended that teams submit a project summary to obtain preliminary feedback on their design.'
     />
   );
   const phase2 = (
-    <TLContent 
+    <TLContent
       top='Next, we refine our building design and develop a 10-minute presentation in preparation for the semifinals. This involves:'
-      list={["Revising the project summary based on feedback", "Creating full HVAC, electrical, and plumbing designs for the house Ensuring we follow all zero energy home codes, building codes, and structural codes", "Soliciting feedback from industry partners in architecture and engineering"]}
+      list={[
+        'Revising the project summary based on feedback',
+        'Creating full HVAC, electrical, and plumbing designs for the house Ensuring we follow all zero energy home codes, building codes, and structural codes',
+        'Soliciting feedback from industry partners in architecture and engineering',
+      ]}
       bottom='At the virtual semifinals in February, all teams present their projects to industry experts. Up to 10 teams per division are selected to advance to the final stage of the competition.'
     />
   );
   const phase3 = (
-    <TLContent 
+    <TLContent
       top='If we advance, we compete in the finals. If not, we continue as an Exhibition Team and present our final design for feedback. This involves:'
-      list={["Finalizing our design, MEP systems, energy ratings, and calculations", "Creating a design narrative dictating every detail about the project", "Preparing a presentation and poster Recording a 90-second video pitch marketing our design to the jurors"]}
+      list={[
+        'Finalizing our design, MEP systems, energy ratings, and calculations',
+        'Creating a design narrative dictating every detail about the project',
+        'Preparing a presentation and poster Recording a 90-second video pitch marketing our design to the jurors',
+      ]}
       bottom='The finals take place in April at the National Renewable Energy Laboratory in Colorado. This event is an exciting opportunity for participants to present their final design, network, and connect with both peers and industry experts.'
     />
   );
   return (
     <>
       {/* Desktop */}
-      <div className='lg:block hidden my-28'>
+      <div className='lg:block hidden mt-24 mb-16 md:mt-32 md:mb-20'>
         <PageHeader
           title='Competition'
           subtitle='Learn about the Solar Decathlon and the work we do throughout the year.'
@@ -55,8 +67,8 @@ const Competition = () => {
               <Subtitle2>BACKGROUND</Subtitle2>
               <H2>Solar Decathlon</H2>
               <p>
-                The Solar Decathlon design competition takes over the course of a
-                year. Teams register in October to present their design to the
+                The Solar Decathlon design competition takes over the course of
+                a year. Teams register in October to present their design to the
                 National Renewable Energy Laboratory in Colorado. Each design is
                 graded on 10 contests that are developed each and every single
                 year for student teams to learn brand new innovative techniques
@@ -65,15 +77,13 @@ const Competition = () => {
             </div>
             <div className='flex flex-col gap-5'>
               <Subtitle2>PROJECT</Subtitle2>
-              <Subtitle2 className='font-semibold'>
-                Designing a Net Zero Energy Home
-              </Subtitle2>
+              <H2>Designing a Net Zero Energy Home</H2>
               <p>
                 When designing a net zero energy home, there are many things to
                 consider. Who are you designing your building for? What is the
-                peak load of your building? Is my house environmentally friendly?
-                These questions and many others are asked by the Jury to consider
-                which is the top place for the competition.
+                peak load of your building? Is my house environmentally
+                friendly? These questions and many others are asked by the Jury
+                to consider which is the top place for the competition.
               </p>
             </div>
           </div>
@@ -84,12 +94,12 @@ const Competition = () => {
             />
             <p>
               Embodied carbon is the carbon dioxide (CO<sub>2</sub>) emissions
-              associated with materials and construction processes throughout the
-              whole life-cycle of a building or infrastructure. By minimizing the
-              embodied carbon of your building, you can create the most
-              sustainable buildings in the world. For some buildings, you could
-              even store carbon from the atmosphere to reduce the effects of
-              global warming.
+              associated with materials and construction processes throughout
+              the whole life-cycle of a building or infrastructure. By
+              minimizing the embodied carbon of your building, you can create
+              the most sustainable buildings in the world. For some buildings,
+              you could even store carbon from the atmosphere to reduce the
+              effects of global warming.
             </p>
           </div>
         </section>
@@ -129,9 +139,9 @@ const Competition = () => {
             The Solar Decathlon design competition takes over the course of a
             year. Teams register in October to present their design to the
             National Renewable Energy Laboratory in Colorado. Each design is
-            graded on 10 contests that are developed each and every single
-            year for student teams to learn brand new innovative techniques
-            for designing net zero energy buildings.
+            graded on 10 contests that are developed each and every single year
+            for student teams to learn brand new innovative techniques for
+            designing net zero energy buildings.
           </p>
           <img
             className='h-auto w-full'
@@ -142,10 +152,10 @@ const Competition = () => {
           <H2>Designing a Net Zero Energy Home</H2>
           <p>
             When designing a net zero energy home, there are many things to
-            consider. Who are you designing your building for? What is the
-            peak load of your building? Is my house environmentally friendly?
-            These questions and many others are asked by the Jury to consider
-            which is the top place for the competition.
+            consider. Who are you designing your building for? What is the peak
+            load of your building? Is my house environmentally friendly? These
+            questions and many others are asked by the Jury to consider which is
+            the top place for the competition.
           </p>
           <p>
             Embodied carbon is the carbon dioxide (CO<sub>2</sub>) emissions

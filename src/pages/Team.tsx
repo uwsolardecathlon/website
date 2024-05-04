@@ -7,7 +7,7 @@ import TeamDescription from '../components/TeamDescription.tsx';
 
 const Team = () => {
   return (
-    <div className='my-28'>
+    <div className='mt-24 mb-16 md:mt-32 md:mb-20'>
       <PageHeader
         title='Our Team'
         subtitle='Meet our team and learn about our team structure.'

@@ -6,7 +6,7 @@ import { faq } from '../data/faq.tsx';
 
 const Join = () => {
   return (
-    <div className='my-28'>
+    <div className='mt-24 mb-16 md:mt-32 md:mb-20'>
       <PageHeader
         title='Join Us'
         subtitle="Interested in joining? When you're ready,
