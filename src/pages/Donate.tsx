@@ -12,9 +12,8 @@ const Donate = () => {
         imageSrc='/images/about_hero.png'
         imageAlt='altText'
       />
-
-      <section className='lg:flex block mt-10 items-center container'>
-        <div className='flex flex-col gap-7 lg:w-1/2 lg:pr-20'>
+      <section className='lg:flex lg:mt-0 mt-10 block items-center container'>
+        <div className='lg:w-1/2 lg:pr-20 flex flex-col gap-7'>
           <H2>Donate</H2>
           <p>
             We are extremely grateful to those who have supported our journey so
@@ -24,11 +23,11 @@ const Donate = () => {
             below.
           </p>
           <div>
-            <Button label='Donate' />
+            <Button label='Donate'/>
           </div>
         </div>
         <img
-          className='mt-10 h-auto align lg:w-1/2'
+          className='lg:w-1/2 w-full mt-10 h-auto align'
           src='/images/about_origin.png'
           alt='Image of Gould Hall (change later)'
         />
