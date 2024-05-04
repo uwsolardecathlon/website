@@ -16,7 +16,7 @@ const Join = () => {
       />
 
       <div className='flex flex-col sm:flex-row gap-12 lg:gap-28 container'>
-        <section className='flex flex-col gap-7 sm:w-1/2'>
+        <section className='flex flex-col gap-4 sm:w-1/2'>
           <H2>How do I join?</H2>
           <p>
             The University of Solar Decathlon is always looking for new members
