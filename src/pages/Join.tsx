@@ -15,7 +15,7 @@ const Join = () => {
         imageAlt='altText'
       />
 
-      <div className='flex flex-col sm:flex-row gap-12 lg:gap-28 container'>
+      <div className='flex flex-col sm:flex-row gap-12 lg:gap-28 lg:mt-0 mt-10 container'>
         <section className='flex flex-col gap-7 sm:w-1/2'>
           <H2>How do I join?</H2>
           <p>
