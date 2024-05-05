@@ -1,42 +1,9 @@
 import H2 from '../components/text/H2.tsx';
-import TLItem from '../components/Timelineitem.tsx';
 import PageHeader from '../components/PageHeader.tsx';
-import TLContent from '../components/Timelinecontent.tsx';
+import TimelinePhase from '../components/TimelinePhase.tsx';
+import { phases } from '../data/timeline.tsx';
 
 const Competition = () => {
-  const phase1 = (
-    <TLContent
-      top='We start by devising a project that targets an issue in Washington relating to climate change, affordability, or environmental justice. This involves:'
-      list={[
-        'Conducting a site analysis',
-        'Designing a building that follows passive design strategies and meets the needs of the target market',
-        'Running energy modeling, embodied carbon analysis, financial analysis',
-      ]}
-      bottom='Though optional, it is highly recommended that teams submit a project summary to obtain preliminary feedback on their design.'
-    />
-  );
-  const phase2 = (
-    <TLContent
-      top='Next, we refine our building design and develop a 10-minute presentation in preparation for the semifinals. This involves:'
-      list={[
-        'Revising the project summary based on feedback',
-        'Creating full HVAC, electrical, and plumbing designs for the house Ensuring we follow all zero energy home codes, building codes, and structural codes',
-        'Soliciting feedback from industry partners in architecture and engineering',
-      ]}
-      bottom='At the virtual semifinals in February, all teams present their projects to industry experts. Up to 10 teams per division are selected to advance to the final stage of the competition.'
-    />
-  );
-  const phase3 = (
-    <TLContent
-      top='If we advance, we compete in the finals. If not, we continue as an Exhibition Team and present our final design for feedback. This involves:'
-      list={[
-        'Finalizing our design, MEP systems, energy ratings, and calculations',
-        'Creating a design narrative dictating every detail about the project',
-        'Preparing a presentation and poster Recording a 90-second video pitch marketing our design to the jurors',
-      ]}
-      bottom='The finals take place in April at the National Renewable Energy Laboratory in Colorado. This event is an exciting opportunity for participants to present their final design, network, and connect with both peers and industry experts.'
-    />
-  );
   return (
     <div className='mt-24 mb-16 md:mt-32 md:mb-20'>
       <PageHeader
@@ -99,20 +66,12 @@ const Competition = () => {
         </section>
       </div>
 
-      <section className='flex flex-col gap-7 container'>
+      <section className='flex flex-col gap-8 container'>
         <H2>Project Timeline</H2>
-        <ul className='flex flex-row flex-wrap justify-between'>
-          <TLItem
-            label='Fall Quarter: Project Summary'
-            number='1'
-            content={phase1}
-          />
-          <TLItem
-            label='Winter Quarter: Semifinals'
-            number='2'
-            content={phase2}
-          />
-          <TLItem label='Spring Quarter: Finals' number='3' content={phase3} />
+        <ul className='flex max-lg:flex-col justify-between gap-10 lg:gap-16'>
+          {phases.map((phase, index) => (
+            <TimelinePhase index={index + 1} key={index} {...phase} />
+          ))}
         </ul>
       </section>
     </div>
