@@ -8,7 +8,7 @@ const H2 = ({
   return (
     <h2
       className={twMerge(
-        'text-neutral-100 lg:text-5xl md:text-4xl text-3xl font-bold',
+        'text-neutral-100 lg:text-5xl md:text-4xl text-3xl font-bold lg:leading-tight',
         className
       )}
       {...rest}

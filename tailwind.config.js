@@ -11,7 +11,7 @@ export default {
       primary: '#4F6F52',
       'primary-dark': '#3A4D39',
       'primary-light': '#739072',
-      secondary: '#ECE3CE',
+      secondary: '#FDFBF5',
       purple: '#32006e',
       red: '#FF0000',
     },
