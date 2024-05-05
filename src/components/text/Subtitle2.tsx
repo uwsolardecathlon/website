@@ -6,7 +6,10 @@ const Subtitle2 = ({
   ...rest
 }: React.HTMLAttributes<HTMLHeadingElement>) => {
   return (
-    <p className={twMerge('text-neutral-100 md:text-xl text-lg', className)} {...rest}>
+    <p
+      className={twMerge('text-neutral-100 md:text-lg text-md', className)}
+      {...rest}
+    >
       {children}
     </p>
   );

@@ -28,7 +28,7 @@ const Button = ({
       {isLink ? (
         <a
           className={twMerge(
-            'px-5 py-2 rounded-full flex items-center gap-2 transition duration-300 ease-in-out group w-fit',
+            'px-5 py-2 rounded-full flex items-center gap-2 transition duration-300 ease-in-out group w-fit text-nowrap',
             variant === 'primary'
               ? 'bg-primary text-white hover:bg-primary-dark'
               : variant === 'secondary'
@@ -51,7 +51,7 @@ const Button = ({
       ) : (
         <button
           className={twMerge(
-            'px-5 py-2 rounded-full flex items-center gap-2 transition duration-300 ease-in-out group w-fit',
+            'px-5 py-2 rounded-full flex items-center gap-2 transition duration-300 ease-in-out group w-fit text-nowrap',
             variant === 'primary'
               ? 'bg-primary text-white hover:bg-primary-dark'
               : variant === 'secondary'

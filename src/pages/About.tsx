@@ -12,7 +12,7 @@ const About = () => {
       <section className='flex max-md:flex-col max-md:gap-8 items-start lg:items-center container'>
         <div className='md:w-1/2 md:pr-12 lg:pr-20 flex flex-col gap-4'>
           <H2>Team History</H2>
-          <div className='flex flex-col gap-2'>
+          <div className='flex flex-col gap-4'>
             <p>
               Founded by a student in Autumn 2023, the University of Washington
               Solar Decathlon team is the first Building Science RSO on campus.
@@ -36,7 +36,7 @@ const About = () => {
       <section className='flex max-md:flex-col max-md:gap-8 mt-12 md:mt-20 items-start lg:items-center container'>
         <div className='md:w-1/2 md:pl-12 lg:pl-20 flex flex-col gap-4'>
           <H2>Reaching Net Zero</H2>
-          <div className='flex flex-col gap-2'>
+          <div className='flex flex-col gap-4'>
             <p>
               The Paris Agreement was a document signed by over 190 countries in
               2015 to reduce carbon emissions by 45% by 2030 and achieve net
