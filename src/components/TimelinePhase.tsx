@@ -17,7 +17,7 @@ function TimelinePhase({
     <>
       <li className='flex flex-col gap-3 divide-y divide-solid divide-neutral-400 basis-1/3'>
         <h3 className='flex gap-2'>
-          <span className='text-neutral-300'>0{index}.</span>
+          <span className='text-neutral-200'>0{index}.</span>
           {label}
         </h3>
         <div className='pt-3'>
