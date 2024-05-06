@@ -44,18 +44,20 @@ const Footer = () => {
           <div className='flex w-full justify-between border-t border-neutral-200 pt-6 pr-4'>
             <p className='text-xs'>Copyright © 2024 UW Solar Decathlon</p>
             <div className='flex gap-4 scale-150'>
-              <Link to='#'>
+              <Link to='mailto:solardecathlon@uw.edu' aria-label='Email'>
                 <Email />
               </Link>
               <Link
                 to='https://www.linkedin.com/company/uw-solar-decathlon/'
                 target='_blank'
+                aria-label='LinkedIn'
               >
                 <LinkedIn />
               </Link>
               <Link
                 to='https://www.instagram.com/uwsolardecathlon/'
                 target='_blank'
+                aria-label='Instagram'
               >
                 <Instagram />
               </Link>
@@ -103,18 +105,20 @@ const Footer = () => {
 
         <div className='flex flex-col border-t border-neutral-200 pt-8 gap-4'>
           <div className='flex gap-4'>
-            <Link to='#'>
+            <Link to='mailto:solardecathlon@uw.edu' aria-label='Email'>
               <Email size={28} />
             </Link>
             <Link
               to='https://www.linkedin.com/company/uw-solar-decathlon/'
               target='_blank'
+              aria-label='LinkedIn'
             >
               <LinkedIn size={28} />
             </Link>
             <Link
               to='https://www.instagram.com/uwsolardecathlon/'
               target='_blank'
+              aria-label='Instagram'
             >
               <Instagram size={28} />
             </Link>
