@@ -9,8 +9,8 @@ import NavItem from './Navitem.tsx';
 
 function Navbar() {
   const before = (window.innerWidth * -100) / 100;
-  const [show, setShow] = useState(false);
-  const transition = useTransition(show, {
+  const [isOpen, setIsOpen] = useState(false);
+  const transition = useTransition(isOpen, {
     from: { x: before, opacity: 0 },
     enter: { x: 0, opacity: 1 },
     leave: { x: before, opacity: 0 },
@@ -58,9 +58,10 @@ function Navbar() {
           </NavLink>
           <Hamburger
             direction='right'
-            toggle={setShow}
-            toggled={show}
+            toggle={setIsOpen}
+            toggled={isOpen}
             size={25}
+            label={isOpen ? 'Open menu' : 'Close menu'}
           />
         </div>
         {transition((style, item) =>
@@ -71,13 +72,13 @@ function Navbar() {
                 'item flex relative opacity-10 text-xl w-full h-[90vh] justify-items-center justify-evenly flex-wrap flex-col bg-white'
               }
             >
-              <NavItem label='home' onClick={() => setShow(!show)} />
-              <NavItem label='about' onClick={() => setShow(!show)} />
-              <NavItem label='team' onClick={() => setShow(!show)} />
-              <NavItem label='competition' onClick={() => setShow(!show)} />
-              <NavItem label='donate' onClick={() => setShow(!show)} />
-              <NavItem label='contact' onClick={() => setShow(!show)} />
-              <NavItem label='join' onClick={() => setShow(!show)} />
+              <NavItem label='home' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='about' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='team' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='competition' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='donate' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='contact' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='join' onClick={() => setIsOpen(!isOpen)} />
             </animated.ul>
           ) : (
             ''

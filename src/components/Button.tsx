@@ -65,7 +65,7 @@ const Button = ({
           {label}
           {Icon && (
             <Icon
-              aria-hidden='true'
+              aria-hidden
               className='shrink-0 transition duration-300 ease-in-out group-hover:translate-x-1.5'
             />
           )}
