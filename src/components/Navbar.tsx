@@ -5,7 +5,7 @@ import { Fade as Hamburger } from 'hamburger-react';
 import { twMerge } from 'tailwind-merge';
 
 import Button from './Button.tsx';
-import NavItem from './Navitem.tsx';
+import NavItem from './NavItem.tsx';
 
 function Navbar() {
   const before = (window.innerWidth * -100) / 100;
