@@ -28,7 +28,7 @@ const Footer = () => {
                 <NavLink to='/competition'>Competition</NavLink>
               </li>
               <li>
-                <NavLink to='/fundraising'>Fundraising</NavLink>
+                <NavLink to='/donate'>Donate</NavLink>
               </li>
               <li>
                 <NavLink to='/join'>Join</NavLink>
@@ -82,7 +82,7 @@ const Footer = () => {
                 <NavLink to='/competition'>Competition</NavLink>
               </li>
               <li>
-                <NavLink to='/fundraising'>Fundraising</NavLink>
+                <NavLink to='/donate'>Donate</NavLink>
               </li>
               <li>
                 <NavLink to='/join'>Join</NavLink>
