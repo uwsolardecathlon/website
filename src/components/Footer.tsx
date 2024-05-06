@@ -20,22 +20,22 @@ const Footer = () => {
               />
             </NavLink>
             <ul className='flex flex-row gap-6'>
-              <li>
+              <li className='custom-underline underline-white'>
                 <NavLink to='/'>Home</NavLink>
               </li>
-              <li>
+              <li className='custom-underline underline-white'>
                 <NavLink to='/about'>About</NavLink>
               </li>
-              <li>
+              <li className='custom-underline underline-white'>
                 <NavLink to='/team'>Team</NavLink>
               </li>
-              <li>
+              <li className='custom-underline underline-white'>
                 <NavLink to='/competition'>Competition</NavLink>
               </li>
-              <li>
+              <li className='custom-underline underline-white'>
                 <NavLink to='/donate'>Donate</NavLink>
               </li>
-              <li>
+              <li className='custom-underline underline-white'>
                 <NavLink to='/join'>Join</NavLink>
               </li>
             </ul>
@@ -44,12 +44,17 @@ const Footer = () => {
           <div className='flex w-full justify-between border-t border-neutral-200 pt-6 pr-4'>
             <p className='text-xs'>Copyright © 2024 UW Solar Decathlon</p>
             <div className='flex gap-4 scale-150'>
-              <Link to='mailto:solardecathlon@uw.edu' aria-label='Email'>
+              <Link
+                to='mailto:solardecathlon@uw.edu'
+                className='transition ease-in-out duration-300 hover:text-primary'
+                aria-label='Email'
+              >
                 <Email />
               </Link>
               <Link
                 to='https://www.linkedin.com/company/uw-solar-decathlon/'
                 target='_blank'
+                className='transition ease-in-out duration-300 hover:text-primary'
                 aria-label='LinkedIn'
               >
                 <LinkedIn />
@@ -57,6 +62,7 @@ const Footer = () => {
               <Link
                 to='https://www.instagram.com/uwsolardecathlon/'
                 target='_blank'
+                className='transition ease-in-out duration-300 hover:text-primary'
                 aria-label='Instagram'
               >
                 <Instagram />

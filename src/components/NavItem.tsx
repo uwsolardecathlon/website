@@ -4,13 +4,13 @@ interface NavItemProps extends React.HTMLAttributes<HTMLLIElement> {
   label: string;
 }
 
-function NavItem({ label, onClick}: NavItemProps) {
+function NavItem({ label, onClick }: NavItemProps) {
   return (
     <li onClick={onClick} className={'flex items-center justify-center'}>
       <NavLink
         to={`/${label === 'home' ? '' : label}`}
         className={
-          'transition ease-in duration-300 hover:text-purple hover:scale-110 capitalize'
+          'transition ease-in-out duration-300 capitalize custom-underline'
         }
       >
         {label}
