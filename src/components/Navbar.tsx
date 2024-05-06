@@ -22,7 +22,12 @@ function Navbar() {
       <div className={twMerge('mx-0 ease-in-out duration-150 bg-white')}>
         <div className='hidden lg:flex flex-row justify-between items-center gap-17 px-24 py-5 max-w-screen-xl mx-auto'>
           <NavLink to='/' className='shrink-0'>
-            <img src='/images/logo.svg' alt='' className='w-16' />
+            <img
+              src='/images/logo.svg'
+              alt=''
+              className='w-16'
+              aria-label='Home'
+            />
           </NavLink>
           <ul className={'flex flex-row justify-between gap-8'}>
             <NavItem label='home' />
@@ -44,7 +49,12 @@ function Navbar() {
       <div className='flex flex-col items-center lg:hidden bg-white'>
         <div className='flex w-screen h-[10vh] justify-between items-center px-8 py-4 md:px-24'>
           <NavLink to='/' className='shrink-0'>
-            <img src='/images/logo.svg' alt='' className='w-16' />
+            <img
+              src='/images/logo.svg'
+              alt=''
+              className='w-16'
+              aria-label='Home'
+            />
           </NavLink>
           <Hamburger
             direction='right'

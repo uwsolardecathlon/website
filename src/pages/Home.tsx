@@ -23,7 +23,7 @@ const Home = () => {
         </div>
         <img
           src='/images/home_hero.png'
-          alt='picture of Solar Decathlon event'
+          alt=''
           className='aspect-[4/5] sm:aspect-[16/9] object-cover'
         />
       </section>
