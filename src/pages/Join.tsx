@@ -1,20 +1,22 @@
 import Button from '../components/Button.tsx';
 import H2 from '../components/text/H2';
 import PageHeader from '../components/PageHeader.tsx';
+import Accordion from '../components/Accordion.tsx';
+import { faq } from '../data/faq.tsx';
 
 const Join = () => {
   return (
-    <div className='my-28'>
+    <div className='mt-24 mb-16 md:mt-32 md:mb-20'>
       <PageHeader
         title='Join Us'
         subtitle="Interested in joining? When you're ready,
         fill out the application linked below."
         imageSrc='/images/about_hero.png'
-        imageAlt='altText'
+        imageAlt=''
       />
 
-      <section className='flex flex-row gap-20 items-center container'>
-        <div className='flex flex-col gap-7 w-2/5'>
+      <div className='flex flex-col sm:flex-row gap-12 lg:gap-28 container'>
+        <section className='flex flex-col gap-4 sm:w-1/2'>
           <H2>How do I join?</H2>
           <p>
             The University of Solar Decathlon is always looking for new members
@@ -24,12 +26,18 @@ const Join = () => {
             below.
           </p>
           <div>
-            <Button label='Apply' />
+            <Button
+              label='Apply'
+              isLink
+              href='https://docs.google.com/forms/d/e/1FAIpQLSeiq1ESdIdI-FjZdShg6LqCIMN0xCSeSiRpsVBt9bDwFWOJ6w/viewform'
+            />
           </div>
-        </div>
-      </section>
-
-      <section></section>
+        </section>
+        <section className='flex flex-col gap-2 sm:w-3/5'>
+          <H2>FAQ</H2>
+          <Accordion panels={faq} />
+        </section>
+      </div>
     </div>
   );
 };

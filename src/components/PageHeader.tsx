@@ -1,7 +1,8 @@
+import { twMerge } from "tailwind-merge";
 import H1 from "../components/text/H1";
 import Subtitle1 from "./text/Subtitle1";
 
-interface PageHeaderProps {
+interface PageHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   subtitle: string;
   imageSrc: string;
@@ -13,37 +14,31 @@ const PageHeader = ({
   subtitle,
   imageSrc,
   imageAlt,
+  className,
+  ...rest
 }: PageHeaderProps) => {
   return (
-    <>
-      {/* Desktop */}
-      <section className="lg:flex hidden flex-col gap-12 container pb-20">
-        <div>
-          <H1>{title}</H1>
-          <Subtitle1 className="mt-4 max-w-md">{subtitle}</Subtitle1>
-        </div>
-        <img
-          className="max-h-[600px] max-w-full object-cover"
-          src={imageSrc}
-          alt={imageAlt ?? ""}
-        />
-      </section>
-
-      {/* Mobile */}
-      <section className="lg:hidden flex flex-col md:gap-20 gap-16 container">
-        <div className="text-center">
-          <H1>{title}</H1>
-          <Subtitle1 className="mt-4 max-w-[670px] mx-auto">
-            {subtitle}
-          </Subtitle1>
-        </div>
-        <img
-          className="h-auto max-w-full"
-          src={imageSrc}
-          alt={imageAlt ?? ""}
-        />
-      </section>
-    </>
+    <section
+      className="container flex flex-col max-sm:text-center gap-4 sm:gap-8 md:gap-12 pb-12 md:pb-20"
+      {...rest}
+    >
+      <div className="flex flex-col gap-4">
+        <H1>{title}</H1>
+        <Subtitle1
+          className={twMerge(
+            "leading-tight max-sm:mx-auto max-w-56 sm:max-w-[400px]",
+            className
+          )}
+        >
+          {subtitle}
+        </Subtitle1>
+      </div>
+      <img
+        className="h-auto aspect-[4/3] sm:aspect-[16/9] object-cover max-w-full"
+        src={imageSrc}
+        alt={imageAlt ?? ""}
+      />
+    </section>
   );
 };
 

@@ -5,12 +5,12 @@ import { Fade as Hamburger } from 'hamburger-react';
 import { twMerge } from 'tailwind-merge';
 
 import Button from './Button.tsx';
-import NavItem from './Navitem.tsx';
+import NavItem from './NavItem.tsx';
 
 function Navbar() {
   const before = (window.innerWidth * -100) / 100;
-  const [show, setShow] = useState(false);
-  const transition = useTransition(show, {
+  const [isOpen, setIsOpen] = useState(false);
+  const transition = useTransition(isOpen, {
     from: { x: before, opacity: 0 },
     enter: { x: 0, opacity: 1 },
     leave: { x: before, opacity: 0 },
@@ -19,14 +19,15 @@ function Navbar() {
   return (
     <nav className='fixed w-full z-50'>
       {/* Desktop */}
-      <div
-        className={twMerge(
-          'mx-0 items-center ease-in-out duration-150 bg-white'
-        )}
-      >
-        <div className='hidden lg:flex flex-row justify-between gap-17 px-24 py-5 max-w-screen-xl mx-auto'>
+      <div className={twMerge('mx-0 ease-in-out duration-150 bg-white')}>
+        <div className='hidden lg:flex flex-row justify-between items-center gap-17 px-24 py-5 max-w-screen-xl mx-auto'>
           <NavLink to='/' className='shrink-0'>
-            <img src='/images/logo.svg' alt='' className='w-12' />
+            <img
+              src='/images/logo.svg'
+              alt=''
+              className='w-16'
+              aria-label='Home'
+            />
           </NavLink>
           <ul className={'flex flex-row justify-between gap-8'}>
             <NavItem label='home' />
@@ -48,13 +49,19 @@ function Navbar() {
       <div className='flex flex-col items-center lg:hidden bg-white'>
         <div className='flex w-screen h-[10vh] justify-between items-center px-8 py-4 md:px-24'>
           <NavLink to='/' className='shrink-0'>
-            <img src='/images/logo.svg' alt='' className='w-12' />
+            <img
+              src='/images/logo.svg'
+              alt=''
+              className='w-16'
+              aria-label='Home'
+            />
           </NavLink>
           <Hamburger
             direction='right'
-            toggle={setShow}
-            toggled={show}
+            toggle={setIsOpen}
+            toggled={isOpen}
             size={25}
+            label={isOpen ? 'Open menu' : 'Close menu'}
           />
         </div>
         {transition((style, item) =>
@@ -65,11 +72,13 @@ function Navbar() {
                 'item flex relative opacity-10 text-xl w-full h-[90vh] justify-items-center justify-evenly flex-wrap flex-col bg-white'
               }
             >
-              <NavItem label='home' onClick={() => setShow(!show)} />
-              <NavItem label='team' onClick={() => setShow(!show)}/>
-              <NavItem label='competition' onClick={() => setShow(!show)}/>
-              <NavItem label='donate' onClick={() => setShow(!show)}/>
-              <NavItem label='join' onClick={() => setShow(!show)}/>
+              <NavItem label='home' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='about' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='team' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='competition' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='donate' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='contact' onClick={() => setIsOpen(!isOpen)} />
+              <NavItem label='join' onClick={() => setIsOpen(!isOpen)} />
             </animated.ul>
           ) : (
             ''

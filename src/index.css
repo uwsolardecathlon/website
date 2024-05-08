@@ -6,6 +6,13 @@
 @font-face {
   font-family: 'Satoshi';
   src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: bold;
 }
 
 /* CSS Reset */
@@ -53,4 +60,33 @@ h6 {
 /* Container with horizontal constraints */
 .container {
   @apply px-8 md:px-24 max-w-screen-xl mx-auto;
+}
+
+/* Custom underline */
+.custom-underline {
+  position: relative;
+}
+
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  left: 0;
+  @apply bg-neutral-100;
+  transition: 0.3s ease-in-out;
+}
+
+.custom-underline:hover::after {
+  width: 100%;
+}
+
+.custom-underline:not(:hover):after {
+  right: 0;
+  left: auto;
+}
+
+.underline-white::after {
+  @apply bg-white/80;
 }

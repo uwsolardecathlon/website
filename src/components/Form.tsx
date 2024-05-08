@@ -2,8 +2,12 @@ import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import Button from './Button.tsx';
+import { twMerge } from 'tailwind-merge';
 
-const Form = () => {
+const Form = ({
+  className,
+  ...rest
+}: React.HTMLAttributes<HTMLFormElement>) => {
   const form = useRef(null);
   const {
     register,
@@ -32,10 +36,11 @@ const Form = () => {
   return (
     <form
       ref={form}
-      className='flex flex-col gap-10'
+      className={twMerge('flex flex-col gap-10', className)}
       onSubmit={handleSubmit(sendEmail)}
+      {...rest}
     >
-      <div className='flex flex-row gap-10'>
+      <div className='lg:flex flex-row gap-10'>
         <div className='flex flex-col gap-3'>
           <label className='flex flex-row'>
             First Name <div className='text-red'>*</div>
@@ -100,7 +105,7 @@ const Form = () => {
         <label>Message</label>
         <textarea
           className='outline-none'
-          rows={4}
+          rows={2}
           name='message'
           placeholder='Enter a message'
         />
