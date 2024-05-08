@@ -9,7 +9,7 @@ const Donate = () => {
         title='Donate'
         subtitle='Your donations will help fund our events, research,
         and participation in the Solar Decathlon Competition.'
-        imageSrc='/images/about_hero.png'
+        imageSrc='/images/donate_hero.png'
         imageAlt=''
         className='max-w-none sm:max-w-[560px]'
       />
@@ -25,11 +25,7 @@ const Donate = () => {
           </p>
           <Button label='Donate' className='mt-2' />
         </div>
-        <img
-          className='w-full md:w-1/2'
-          src='/images/about_origin.png'
-          alt=''
-        />
+        <img className='w-full md:w-1/2' src='/images/support_us.png' alt='' />
       </section>
     </div>
   );

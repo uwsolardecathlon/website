@@ -11,7 +11,7 @@ const Join = () => {
         title='Join Us'
         subtitle="Interested in joining? When you're ready,
         fill out the application linked below."
-        imageSrc='/images/about_hero.png'
+        imageSrc='/images/join_hero.png'
         imageAlt=''
       />
 

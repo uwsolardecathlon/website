@@ -9,7 +9,7 @@ const Competition = () => {
       <PageHeader
         title='Competition'
         subtitle='Learn about the Solar Decathlon and the work we do throughout the year.'
-        imageSrc='/images/home_hero.png'
+        imageSrc='/images/competition_hero.png'
         imageAlt=''
       />
       <section className='flex max-md:flex-col max-md:gap-8 items-start lg:items-center container'>

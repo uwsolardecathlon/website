@@ -54,7 +54,7 @@ const About = () => {
         </div>
         <img
           className='w-full md:w-1/2 md:order-first'
-          src='/images/about_origin.png'
+          src='/images/about_team.png'
           alt=''
         />
       </section>
