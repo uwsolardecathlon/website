@@ -40,7 +40,7 @@ const Form = ({
       onSubmit={handleSubmit(sendEmail)}
       {...rest}
     >
-      <div className='lg:flex flex-row gap-10'>
+      <div className='flex lg:flex-row flex-col gap-10'>
         <div className='flex flex-col gap-3'>
           <label className='flex flex-row'>
             First Name <div className='text-red'>*</div>
@@ -111,7 +111,7 @@ const Form = ({
         />
         <hr className='border-neutral-300' />
       </div>
-      <Button className='w-fit' label='Submit' type='submit' />
+      <Button className='w-fit self-center' label='Submit' type='submit' />
     </form>
   );
 };
