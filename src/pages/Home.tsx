@@ -4,6 +4,7 @@ import H1 from '../components/text/H1.tsx';
 import H2 from '../components/text/H2.tsx';
 import Subtitle1 from '../components/text/Subtitle1.tsx';
 import Subtitle2 from '../components/text/Subtitle2.tsx';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -14,12 +15,15 @@ const Home = () => {
           <Subtitle1 className='max-w-sm'>
             Building a sustainable future at the University of Washington
           </Subtitle1>
-          <Button
-            className='w-fit'
-            label='Learn More'
-            variant='secondary'
-            icon={GoArrowRight}
-          />
+          <NavLink to='/about' className='w-fit'>
+            <Button
+              className='w-fit'
+              label='Learn More'
+              variant='secondary'
+              icon={GoArrowRight}
+              tabIndex={-1}
+            />
+          </NavLink>
         </div>
         <img
           src='/images/home_hero.png'
@@ -38,11 +42,14 @@ const Home = () => {
               We participate in the Solar Decathlon, a prestigious collegiate
               competition run by the US Department of Energy.
             </Subtitle2>
-            <Button
-              label='View the challenge'
-              variant='secondary'
-              className='w-fit border-white/60 hover:border-white text-white'
-            />
+            <NavLink to='/competition' className='w-fit'>
+              <Button
+                label='View the challenge'
+                variant='secondary'
+                className='w-fit border-white/60 hover:border-white text-white'
+                tabIndex={-1}
+              />
+            </NavLink>
           </div>
         </div>
       </section>
@@ -66,7 +73,14 @@ const Home = () => {
             fundraising for the competition, and developing innovative research
             ideas to change the future.
           </p>
-          <Button className='w-fit' label='Meet the team' variant='secondary' />
+          <NavLink to='/team' className='w-fit'>
+            <Button
+              className='w-fit'
+              label='Meet the team'
+              variant='secondary'
+              tabIndex={-1}
+            />
+          </NavLink>
         </div>
       </section>
 
@@ -78,8 +92,12 @@ const Home = () => {
             join or support us through donations!
           </p>
           <div className='flex gap-4'>
-            <Button label='Join Us' variant='primary' />
-            <Button label='Donate' variant='secondary' />
+            <NavLink to='/join' className='w-fit'>
+              <Button label='Join Us' variant='primary' tabIndex={-1} />
+            </NavLink>
+            <NavLink to='/donate' className='w-fit'>
+              <Button label='Donate' variant='secondary' tabIndex={-1} />
+            </NavLink>
           </div>
         </div>
       </section>
