@@ -61,7 +61,7 @@ const Competition = () => {
             className="max-h-[40rem]"
           />
         </section> */}
-        <section className='flex flex-row mt-10 gap-20 items-center container'>
+        <section className='flex flex-row gap-20 items-center container'>
           <div className='flex flex-col gap-12'>
             <div className='flex flex-col gap-5'>
               <Subtitle2>BACKGROUND</Subtitle2>
@@ -126,14 +126,14 @@ const Competition = () => {
       </div>
 
       {/* Mobile */}
-      <div className='lg:hidden flex flex-col gap-20 my-28'>
+      <div className='lg:hidden flex flex-col my-28'>
         <PageHeader
           title='Competition'
           subtitle='Learn about the Solar Decathlon and the work we do throughout the year.'
           imageSrc='/images/home_hero.png'
           imageAlt='picture of Solar Decathlon event'
         />
-        <section className='flex flex-col gap-6 items-center container'>
+        <section className='flex flex-col gap-6 container'>
           <H2>Solar Decathlon</H2>
           <p>
             The Solar Decathlon design competition takes over the course of a

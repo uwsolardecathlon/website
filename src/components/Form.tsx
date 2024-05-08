@@ -41,7 +41,7 @@ const Form = ({
       {...rest}
     >
       <div className='lg:flex flex-row gap-10'>
-        <div className='flex flex-col gap-3'>
+        <div className='lg:pb-0 flex flex-col gap-3 pb-10'>
           <label className='flex flex-row'>
             First Name <div className='text-red'>*</div>
           </label>
