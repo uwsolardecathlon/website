@@ -148,7 +148,7 @@ const Competition = () => {
             src='/images/competition_drawing.png'
           />
         </section>
-        <section className='flex flex-col gap-5 container bg-neutral-300 md:py-24 py-8'>
+        <section className='flex flex-col gap-5 container bg-neutral-300 md:py-24 py-8 mt-10 mb-10'>
           <H2>Designing a Net Zero Energy Home</H2>
           <p>
             When designing a net zero energy home, there are many things to

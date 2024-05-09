@@ -10,7 +10,7 @@ const Home = () => {
     <>
       {/* Desktop */}
       <article className='hidden lg:block'>
-        <section className='flex flex-col gap-20 mt-40 container'>
+        <section className='flex flex-col gap-10 mt-40 container'>
           <div className='flex flex-col gap-7'>
             <H1>UW Solar Decathlon</H1>
             <Subtitle1 className='max-w-sm'>
@@ -89,7 +89,7 @@ const Home = () => {
 
       {/* Mobile */}
       <article className='lg:hidden flex flex-col md:gap-20 gap-16 w-full'>
-        <section className='flex flex-col gap-20 md:mt-32 mt-24 items-center container'>
+        <section className='flex flex-col gap-10 md:mt-32 mt-24 items-center container'>
           <div className='flex flex-col gap-7 items-center'>
             <H1 className='text-center'>UW Solar Decathlon</H1>
             <Subtitle1 className='max-w-sm text-center'>
