@@ -18,8 +18,8 @@ const Form = ({
   const sendEmail = () => {
     if (form && form.current) {
       emailjs
-        .sendForm('service_1numhhk', 'template_8yqjtfc', form.current, {
-          publicKey: 'unzAHWAw8je65UAc6',
+        .sendForm('service_xo4kyyj', 'template_f8nqtih', form.current, {
+          publicKey: 'bvQjEGLWtZlUVxJF9',
         })
         .then(
           () => {
