@@ -16,6 +16,10 @@ const Form = ({
     reset,
   } = useForm({ mode: 'all' });
   const sendEmail = () => {
+    const hiddenInput = (document.getElementById('hidden-input') as HTMLInputElement);
+    if (hiddenInput.value !== "") {
+      return;
+    }
     if (form && form.current) {
       emailjs
         .sendForm('service_xo4kyyj', 'template_f8nqtih', form.current, {
@@ -40,6 +44,7 @@ const Form = ({
       onSubmit={handleSubmit(sendEmail)}
       {...rest}
     >
+      <input id='hidden-input' className='hidden'></input>
       <div className='flex md:flex-row flex-col gap-10'>
         <div className='flex flex-col gap-3'>
           <label className='flex flex-row'>
