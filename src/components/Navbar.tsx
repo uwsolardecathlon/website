@@ -20,12 +20,12 @@ function Navbar() {
     <nav className='fixed w-full z-50'>
       {/* Desktop */}
       <div className={twMerge('mx-0 ease-in-out duration-150 bg-white')}>
-        <div className='hidden lg:flex flex-row justify-between items-center gap-17 px-24 py-5 max-w-screen-xl mx-auto'>
+        <div className='hidden lg:flex flex-row justify-between items-center gap-17 px-24 py-2 max-w-screen-xl mx-auto'>
           <NavLink to='/' className='shrink-0'>
             <img
               src='/images/logo.svg'
               alt=''
-              className='w-16'
+              className='w-24'
               aria-label='Home'
             />
           </NavLink>

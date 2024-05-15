@@ -10,7 +10,7 @@ function NavItem({ label, onClick }: NavItemProps) {
       <NavLink
         to={`/${label === 'home' ? '' : label}`}
         className={
-          'transition ease-in-out duration-300 capitalize custom-underline'
+          'transition ease-in-out duration-300 capitalize custom-underline text-lg'
         }
       >
         {label}
