@@ -8,12 +8,12 @@ import Button from './Button.tsx';
 import NavItem from './NavItem.tsx';
 
 function Navbar() {
-  const before = (window.innerWidth * -100) / 100;
+  const before = (window.innerWidth * 100) / 100;
   const [isOpen, setIsOpen] = useState(false);
   const transition = useTransition(isOpen, {
-    from: { x: before, opacity: 0 },
-    enter: { x: 0, opacity: 1 },
-    leave: { x: before, opacity: 0 },
+    from: { x: before },
+    enter: { x: 0 },
+    leave: { x: before },
   });
 
   return (
@@ -46,8 +46,8 @@ function Navbar() {
       </div>
 
       {/* Mobile */}
-      <div className='flex flex-col items-center lg:hidden bg-white'>
-        <div className='flex w-screen h-[10vh] justify-between items-center px-8 py-4 md:px-24'>
+      <div className='flex flex-col items-center lg:hidden'>
+        <div className='flex w-screen h-[10vh] justify-between items-center px-8 py-4 md:px-24 bg-white'>
           <NavLink to='/' className='shrink-0'>
             <img
               src='/images/logo.svg'
@@ -69,7 +69,7 @@ function Navbar() {
             <animated.ul
               style={style}
               className={
-                'item flex relative opacity-10 text-xl w-full h-[90vh] justify-items-center justify-evenly flex-wrap flex-col bg-white'
+                'item flex relative text-xl w-full h-[90vh] justify-items-center justify-evenly flex-wrap flex-col nav-open bg-white'
               }
             >
               <NavItem label='home' onClick={() => setIsOpen(!isOpen)} />

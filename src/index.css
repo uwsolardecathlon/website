@@ -90,3 +90,9 @@ h6 {
 .underline-white::after {
   @apply bg-white/80;
 }
+
+/* Disable scrolling when mobile nav is open */
+body:has(.nav-open) {
+  height: 100%;
+  overflow-y: hidden;
+}
