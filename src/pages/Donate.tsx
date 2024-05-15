@@ -9,7 +9,7 @@ const Donate = () => {
         title='Donate'
         subtitle='Your donations will help fund our events, research,
         and participation in the Solar Decathlon Competition.'
-        imageSrc='/images/donate_hero.png'
+        imageSrc='/images/donate_hero.jpg'
         imageAlt=''
         className='max-w-none sm:max-w-[560px]'
       />
