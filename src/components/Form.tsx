@@ -17,7 +17,7 @@ const Form = ({
   } = useForm({ mode: 'all' });
   const sendEmail = () => {
     const hiddenInput = (document.getElementById('hidden-input') as HTMLInputElement);
-    if (hiddenInput !== null && hiddenInput.value !== "") {
+    if (hiddenInput === null || hiddenInput.value !== "") {
       return;
     }
     if (form && form.current) {
