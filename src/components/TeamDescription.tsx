@@ -1,16 +1,12 @@
 import { twMerge } from 'tailwind-merge';
+import { PortableText } from '@portabletext/react';
 
 export interface TeamDescriptionProps
   extends React.HTMLAttributes<HTMLDivElement> {
-  description: string;
+  description: [];
   commitment: string;
-  responsibilities: Responsibility[];
-  additionalInfo?: React.ReactNode;
-}
-
-interface Responsibility {
-  name: string;
-  description: string;
+  responsibilities: [];
+  additionalInfo?: [];
 }
 
 const TeamDescription = ({
@@ -22,21 +18,17 @@ const TeamDescription = ({
   ...rest
 }: TeamDescriptionProps) => {
   return (
-    <div className={twMerge('flex flex-col gap-4', className)} {...rest}>
-      <p>{description}</p>
+    <div
+      className={twMerge('flex flex-col gap-4 portable-text', className)}
+      {...rest}
+    >
+      <PortableText value={description} />
       <p>Time Commitment: {commitment}</p>
       <div>
         <p>Responsibilities:</p>
-        <ul className='list-disc pl-5'>
-          {responsibilities.map((responsibility, index) => (
-            <li key={index}>
-              <strong>{responsibility.name}:</strong>{' '}
-              {responsibility.description}
-            </li>
-          ))}
-        </ul>
+        <PortableText value={responsibilities} />
       </div>
-      {additionalInfo}
+      {additionalInfo && <PortableText value={additionalInfo} />}
     </div>
   );
 };

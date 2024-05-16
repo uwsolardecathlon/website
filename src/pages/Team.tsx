@@ -1,11 +1,47 @@
+import { useState, useEffect } from 'react';
+
 import PageHeader from '../components/PageHeader.tsx';
 import H2 from '../components/text/H2.tsx';
 import TeamSection, { TeamSectionProps } from '../components/TeamSection.tsx';
 import Accordion from '../components/Accordion.tsx';
-import { teams, relatedGroups } from '../data/teams.js';
 import TeamDescription from '../components/TeamDescription.tsx';
 
+import sanityClient from '../client.tsx';
+
 const Team = () => {
+  const [teams, setTeams] = useState([]);
+  const [relatedGroups, setRelatedGroups] = useState([]);
+
+  const subteamsQuery = `*[_type=='team' && category=='subteam']{
+    name,
+    description,
+    commitment,
+    responsibilities,
+    additionalInfo,
+  } | order(id asc)
+  `;
+
+  const relatedGroupsQuery = `*[_type=='team' && category=='relatedGroup']{
+      name,
+      description,
+      commitment,
+      responsibilities,
+      additionalInfo,
+    } | order(id asc)
+  `;
+
+  useEffect(() => {
+    const getData = async () => {
+      const teams = await sanityClient.fetch(subteamsQuery);
+      setTeams(teams);
+
+      const relatedGroups = await sanityClient.fetch(relatedGroupsQuery);
+      setRelatedGroups(relatedGroups);
+    };
+
+    getData();
+  }, [subteamsQuery, relatedGroupsQuery]);
+
   return (
     <div className='mt-24 mb-16 md:mt-32 md:mb-20'>
       <PageHeader
@@ -67,31 +103,33 @@ const Team = () => {
           className='md:hidden'
         />
       </section>
-      <section className='container flex flex-col gap-2 md:gap-8'>
-        <H2>Related Groups</H2>
-        <div className='max-md:hidden flex flex-col gap-12'>
-          {relatedGroups.map((team: TeamSectionProps, index) => (
-            <TeamSection
-              className='[&:not(:last-child)]:pb-8 [&:not(:last-child)]:border-b border-neutral-400'
-              key={index}
-              {...team}
-            />
-          ))}
-        </div>
-        <Accordion
-          panels={relatedGroups.map((team: TeamSectionProps, index) => ({
-            title: team.name,
-            content: (
-              <TeamDescription
+      {relatedGroups.length > 0 && (
+        <section className='container flex flex-col gap-2 md:gap-8'>
+          <H2>Related Groups</H2>
+          <div className='max-md:hidden flex flex-col gap-12'>
+            {relatedGroups.map((team: TeamSectionProps, index) => (
+              <TeamSection
                 className='[&:not(:last-child)]:pb-8 [&:not(:last-child)]:border-b border-neutral-400'
                 key={index}
                 {...team}
               />
-            ),
-          }))}
-          className='md:hidden'
-        />
-      </section>
+            ))}
+          </div>
+          <Accordion
+            panels={relatedGroups.map((team: TeamSectionProps, index) => ({
+              title: team.name,
+              content: (
+                <TeamDescription
+                  className='[&:not(:last-child)]:pb-8 [&:not(:last-child)]:border-b border-neutral-400'
+                  key={index}
+                  {...team}
+                />
+              ),
+            }))}
+            className='md:hidden'
+          />
+        </section>
+      )}
     </div>
   );
 };
