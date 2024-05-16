@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from 'react-router-dom';
 
 import './index.css';
 import Root from './pages/Root';
@@ -11,7 +15,6 @@ import Team from './pages/Team';
 import Donate from './pages/Donate';
 import Join from './pages/Join';
 import Contact from './pages/Contact';
-import Error from './pages/Error';
 
 const router = createBrowserRouter([
   {
@@ -48,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path: '*',
-        element: <Error />,
+        element: <Navigate to='/' replace />,
       },
     ],
   },
