@@ -4,29 +4,9 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'id',
-      title: 'ID',
-      description: 'Teams will be ordered by ID in ascending order.',
-      type: 'number',
-      validation: (rule: any) => rule.required(),
-    },
-    {
       name: 'name',
       title: 'Name',
       type: 'string',
-      validation: (rule: any) => rule.required(),
-    },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Subteam', value: 'subteam'},
-          {title: 'Related Group', value: 'relatedGroup'},
-        ],
-        layout: 'radio',
-      },
       validation: (rule: any) => rule.required(),
     },
     {

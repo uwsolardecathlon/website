@@ -1,8 +1,10 @@
 import pageHeader from './objects/pageHeader'
+import section from './objects/section'
 import imageSection from './objects/imageSection'
 import team from './objects/team'
 
 import homePage from './documents/homePage'
 import aboutPage from './documents/aboutPage'
+import teamPage from './documents/teamPage'
 
-export const schemaTypes = [pageHeader, imageSection, team, homePage, aboutPage]
+export const schemaTypes = [pageHeader, section, imageSection, team, homePage, aboutPage, teamPage]

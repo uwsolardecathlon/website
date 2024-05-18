@@ -25,6 +25,7 @@ export default defineConfig({
           .items([
             singletonListItem(S, 'homePage', 'Home'),
             singletonListItem(S, 'aboutPage', 'About'),
+            singletonListItem(S, 'teamPage', 'Team'),
           ]),
     }),
     visionTool(),
