@@ -22,7 +22,10 @@ export default defineConfig({
       structure: (S) =>
         S.list()
           .title('Content')
-          .items([singletonListItem(S, 'homePage', 'Home')]),
+          .items([
+            singletonListItem(S, 'homePage', 'Home'),
+            singletonListItem(S, 'aboutPage', 'About'),
+          ]),
     }),
     visionTool(),
   ],
