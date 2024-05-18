@@ -1,3 +1,5 @@
-import teamType from './documents/teamType'
+import team from './objects/team'
 
-export const schemaTypes = [teamType]
+import homePage from './documents/homePage'
+
+export const schemaTypes = [team, homePage]

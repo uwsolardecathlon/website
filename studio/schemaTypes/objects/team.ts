@@ -1,19 +1,19 @@
 export default {
   name: 'team',
   title: 'Team',
-  type: 'document',
+  type: 'object',
   fields: [
-    {
-      name: 'name',
-      title: 'Name',
-      type: 'string',
-      validation: (rule: any) => rule.required(),
-    },
     {
       name: 'id',
       title: 'ID',
       description: 'Teams will be ordered by ID in ascending order.',
       type: 'number',
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      name: 'name',
+      title: 'Name',
+      type: 'string',
       validation: (rule: any) => rule.required(),
     },
     {
