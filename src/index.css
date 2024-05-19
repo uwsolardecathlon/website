@@ -96,12 +96,3 @@ body:has(.nav-open) {
   height: 100%;
   overflow-y: hidden;
 }
-
-/* Default portable text styling */
-.portable-text ul {
-  @apply list-disc pl-5;
-}
-
-.portable-text a {
-  @apply underline underline-offset-4 decoration-[0.5px] hover:text-primary transition duration-300;
-}

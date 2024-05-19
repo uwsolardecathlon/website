@@ -1,5 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 import { PortableText } from '@portabletext/react';
+import { components } from '../utils/portableText';
 
 export interface TeamDescriptionProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -18,17 +19,16 @@ const TeamDescription = ({
   ...rest
 }: TeamDescriptionProps) => {
   return (
-    <div
-      className={twMerge('flex flex-col gap-4 portable-text', className)}
-      {...rest}
-    >
-      <PortableText value={description} />
+    <div className={twMerge('flex flex-col gap-4', className)} {...rest}>
+      <PortableText value={description} components={components} />
       <p>Time Commitment: {commitment}</p>
       <div>
         <p>Responsibilities:</p>
-        <PortableText value={responsibilities} />
+        <PortableText value={responsibilities} components={components} />
       </div>
-      {additionalInfo && <PortableText value={additionalInfo} />}
+      {additionalInfo && (
+        <PortableText value={additionalInfo} components={components} />
+      )}
     </div>
   );
 };

@@ -10,6 +10,7 @@ import TeamDescription from '../components/TeamDescription.tsx';
 import { Section, SectionWithImage } from '../types/types.ts';
 import sanityClient from '../client.tsx';
 import { getImg } from '../utils/getImg.ts';
+import { components } from '../utils/portableText.tsx';
 
 const Team = () => {
   const [header, setHeader] = useState<SectionWithImage>();
@@ -46,7 +47,7 @@ const Team = () => {
         <section className='container flex flex-col gap-4'>
           <H2>{overview.heading}</H2>
           <div className='flex flex-col gap-4'>
-            <PortableText value={overview.body as []} />
+            <PortableText value={overview.body as []} components={components} />
           </div>
         </section>
       )}

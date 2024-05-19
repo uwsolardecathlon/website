@@ -16,6 +16,7 @@ import {
 } from '../types/types.ts';
 import sanityClient from '../client.tsx';
 import { getImg } from '../utils/getImg.ts';
+import { components } from '../utils/portableText.tsx';
 
 type GetInvolvedSection = Section & {
   joinBtnText: string;
@@ -97,7 +98,7 @@ const Home = () => {
           ></img>
           <div className='flex flex-col gap-4'>
             <H2>{team.heading}</H2>
-            <PortableText value={team.body as []} />
+            <PortableText value={team.body as []} components={components} />
             <NavLink to='/team' className='w-fit'>
               <Button
                 className='w-fit'

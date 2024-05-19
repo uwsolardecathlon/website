@@ -26,7 +26,7 @@ export default {
         {
           name: 'body',
           title: 'Subheading',
-          type: 'text',
+          type: 'string',
           validation: (rule: any) => rule.required(),
         },
         {
@@ -63,7 +63,7 @@ export default {
         {
           name: 'body',
           title: 'Body',
-          type: 'text',
+          type: 'string',
           validation: (rule: any) => rule.required(),
         },
         {
@@ -129,7 +129,7 @@ export default {
         {
           name: 'body',
           title: 'Body',
-          type: 'text',
+          type: 'string',
           validation: (rule: any) => rule.required(),
         },
         {

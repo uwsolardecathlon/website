@@ -6,5 +6,15 @@ import team from './objects/team'
 import homePage from './documents/homePage'
 import aboutPage from './documents/aboutPage'
 import teamPage from './documents/teamPage'
+import competitionPage from './documents/competitionPage'
 
-export const schemaTypes = [pageHeader, section, imageSection, team, homePage, aboutPage, teamPage]
+export const schemaTypes = [
+  pageHeader,
+  section,
+  imageSection,
+  team,
+  homePage,
+  aboutPage,
+  teamPage,
+  competitionPage,
+]

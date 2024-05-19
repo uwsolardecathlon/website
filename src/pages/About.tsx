@@ -7,6 +7,7 @@ import PageHeader from '../components/PageHeader.tsx';
 import { SectionWithImage } from '../types/types.ts';
 import sanityClient from '../client.tsx';
 import { getImg } from '../utils/getImg.ts';
+import { components } from '../utils/portableText.tsx';
 
 const About = () => {
   const [header, setHeader] = useState<SectionWithImage>();
@@ -40,7 +41,10 @@ const About = () => {
           <div className='md:w-1/2 md:pr-12 lg:pr-20 flex flex-col gap-4'>
             <H2>{section1.heading}</H2>
             <div className='flex flex-col gap-4'>
-              <PortableText value={section1.body as []} />
+              <PortableText
+                value={section1.body as []}
+                components={components}
+              />
             </div>
           </div>
           <img className='w-full md:w-1/2' src={getImg(section1.img)} alt='' />
@@ -51,7 +55,10 @@ const About = () => {
           <div className='md:w-1/2 md:pl-12 lg:pl-20 flex flex-col gap-4'>
             <H2>{section2.heading}</H2>
             <div className='flex flex-col gap-4'>
-              <PortableText value={section2.body as []} />
+              <PortableText
+                value={section2.body as []}
+                components={components}
+              />
             </div>
           </div>
           <img
