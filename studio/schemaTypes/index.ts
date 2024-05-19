@@ -9,6 +9,7 @@ import aboutPage from './documents/aboutPage'
 import teamPage from './documents/teamPage'
 import competitionPage from './documents/competitionPage'
 import donatePage from './documents/donatePage'
+import contactPage from './documents/contactPage'
 
 export const schemaTypes = [
   pageHeader,
@@ -21,4 +22,5 @@ export const schemaTypes = [
   teamPage,
   competitionPage,
   donatePage,
+  contactPage,
 ]
