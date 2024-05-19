@@ -27,6 +27,7 @@ export default defineConfig({
             singletonListItem(S, 'aboutPage', 'About'),
             singletonListItem(S, 'teamPage', 'Team'),
             singletonListItem(S, 'competitionPage', 'Competition'),
+            singletonListItem(S, 'donatePage', 'Donate'),
           ]),
     }),
     visionTool(),
