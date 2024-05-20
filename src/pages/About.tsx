@@ -15,7 +15,7 @@ const About = () => {
   const [section2, setSection2] = useState<SectionWithImage>();
 
   useEffect(() => {
-    const query = `*[_type=='aboutPage'][0]`;
+    const query = `*[_type=='about'][0]`;
 
     const getData = async () => {
       const { header, section1, section2 } = await sanityClient.fetch(query);

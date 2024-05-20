@@ -11,7 +11,7 @@ const Contact = () => {
   const [header, setHeader] = useState<Section>();
 
   useEffect(() => {
-    const query = `*[_type=='contactPage'][0]`;
+    const query = `*[_type=='contact'][0]`;
 
     const getData = async () => {
       const { header } = await sanityClient.fetch(query);

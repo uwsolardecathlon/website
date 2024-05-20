@@ -1,5 +1,5 @@
 export default {
-  name: 'competitionPage',
+  name: 'competition',
   title: 'Competition',
   type: 'document',
   groups: [

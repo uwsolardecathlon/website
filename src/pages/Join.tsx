@@ -23,7 +23,7 @@ const Join = () => {
   const [faq, setFaq] = useState<AccordionPanelProps[]>();
 
   useEffect(() => {
-    const query = `*[_type=='joinPage'][0]`;
+    const query = `*[_type=='join'][0]`;
 
     const getData = async () => {
       const { header, apply, faq } = await sanityClient.fetch(query);

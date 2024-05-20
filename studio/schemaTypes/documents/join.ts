@@ -1,5 +1,5 @@
 export default {
-  name: 'joinPage',
+  name: 'join',
   title: 'Join',
   type: 'document',
   groups: [

@@ -1,11 +1,10 @@
 export default {
-  name: 'aboutPage',
-  title: 'About',
+  name: 'donate',
+  title: 'Donate',
   type: 'document',
   groups: [
     {name: 'header', title: 'Header'},
-    {name: 'section1', title: 'Section 1'},
-    {name: 'section2', title: 'Section 2'},
+    {name: 'section', title: 'Section'},
   ],
   fields: [
     {
@@ -17,27 +16,19 @@ export default {
       group: 'header',
     },
     {
-      name: 'section1',
-      title: 'Section 1',
-      type: 'imgSection',
+      name: 'section',
+      title: 'Section',
+      type: 'imgBtnSection',
       validation: (rule: any) => rule.required(),
       options: {collapsible: true},
-      group: 'section1',
-    },
-    {
-      name: 'section2',
-      title: 'Section 2',
-      type: 'imgSection',
-      validation: (rule: any) => rule.required(),
-      options: {collapsible: true},
-      group: 'section2',
+      group: 'section',
     },
   ],
   preview: {
     // Hardcode document name
     prepare() {
       return {
-        title: 'About',
+        title: 'Donate',
       }
     },
   },

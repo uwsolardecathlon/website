@@ -1,5 +1,5 @@
 export default {
-  name: 'homePage',
+  name: 'home',
   title: 'Home',
   type: 'document',
   groups: [

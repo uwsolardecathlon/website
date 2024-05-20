@@ -4,16 +4,16 @@ import section from './objects/section'
 import buttonSection from './objects/buttonSection'
 import imageSection from './objects/imageSection'
 import imageButtonSection from './objects/imageButtonSection'
-import team from './objects/team'
+import subteam from './objects/subteam'
 import faq from './objects/faq'
 
-import homePage from './documents/homePage'
-import aboutPage from './documents/aboutPage'
-import teamPage from './documents/teamPage'
-import competitionPage from './documents/competitionPage'
-import donatePage from './documents/donatePage'
-import contactPage from './documents/contactPage'
-import joinPage from './documents/joinPage'
+import home from './documents/home'
+import about from './documents/about'
+import team from './documents/team'
+import competition from './documents/competition'
+import donate from './documents/donate'
+import contact from './documents/contact'
+import join from './documents/join'
 
 export const schemaTypes = [
   pageHeader,
@@ -22,13 +22,13 @@ export const schemaTypes = [
   buttonSection,
   imageSection,
   imageButtonSection,
-  team,
+  subteam,
   faq,
-  homePage,
-  aboutPage,
-  teamPage,
-  competitionPage,
-  donatePage,
-  contactPage,
-  joinPage,
+  home,
+  about,
+  team,
+  competition,
+  donate,
+  contact,
+  join,
 ]

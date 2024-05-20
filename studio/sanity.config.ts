@@ -23,13 +23,13 @@ export default defineConfig({
         S.list()
           .title('Content')
           .items([
-            singletonListItem(S, 'homePage', 'Home'),
-            singletonListItem(S, 'aboutPage', 'About'),
-            singletonListItem(S, 'teamPage', 'Team'),
-            singletonListItem(S, 'competitionPage', 'Competition'),
-            singletonListItem(S, 'donatePage', 'Donate'),
-            singletonListItem(S, 'contactPage', 'Contact'),
-            singletonListItem(S, 'joinPage', 'Join'),
+            singletonListItem(S, 'home', 'Home'),
+            singletonListItem(S, 'about', 'About'),
+            singletonListItem(S, 'team', 'Team'),
+            singletonListItem(S, 'competition', 'Competition'),
+            singletonListItem(S, 'donate', 'Donate'),
+            singletonListItem(S, 'contact', 'Contact'),
+            singletonListItem(S, 'join', 'Join'),
           ]),
     }),
     visionTool(),

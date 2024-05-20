@@ -19,7 +19,7 @@ const Team = () => {
   const [relatedGroups, setRelatedGroups] = useState([]);
 
   useEffect(() => {
-    const query = `*[_type=='teamPage'][0]`;
+    const query = `*[_type=='team'][0]`;
 
     const getData = async () => {
       const { header, overview, subteams, relatedGroups } =

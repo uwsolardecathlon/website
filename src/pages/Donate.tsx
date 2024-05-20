@@ -15,7 +15,7 @@ const Donate = () => {
   const [section, setSection] = useState<SectionWithImageAndButton>();
 
   useEffect(() => {
-    const query = `*[_type=='donatePage'][0]`;
+    const query = `*[_type=='donate'][0]`;
 
     const getData = async () => {
       const { header, section } = await sanityClient.fetch(query);

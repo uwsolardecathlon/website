@@ -1,5 +1,5 @@
 export default {
-  name: 'team',
+  name: 'subteam',
   title: 'Team',
   type: 'object',
   fields: [

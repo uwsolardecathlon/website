@@ -1,5 +1,5 @@
 export default {
-  name: 'contactPage',
+  name: 'contact',
   title: 'Contact',
   type: 'document',
   groups: [{name: 'header', title: 'Header'}],

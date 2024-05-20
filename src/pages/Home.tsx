@@ -30,7 +30,7 @@ const Home = () => {
   const [team, setTeam] = useState<SectionWithImageAndButton>();
   const [getInvolved, setGetInvolved] = useState<GetInvolvedSection>();
 
-  const query = `*[_type=='homePage'][0]`;
+  const query = `*[_type=='home'][0]`;
 
   useEffect(() => {
     const getData = async () => {

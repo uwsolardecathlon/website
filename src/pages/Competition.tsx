@@ -17,7 +17,7 @@ const Competition = () => {
   const [phases, setPhases] = useState<Section[]>([]);
 
   useEffect(() => {
-    const query = `*[_type=='competitionPage'][0]`;
+    const query = `*[_type=='competition'][0]`;
 
     const getData = async () => {
       const { header, background, project, timeline } =

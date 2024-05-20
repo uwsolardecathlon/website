@@ -1,5 +1,5 @@
 export default {
-  name: 'teamPage',
+  name: 'team',
   title: 'Team',
   type: 'document',
   groups: [
