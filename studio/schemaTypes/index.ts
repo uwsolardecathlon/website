@@ -14,6 +14,7 @@ import competition from './documents/competition'
 import donate from './documents/donate'
 import contact from './documents/contact'
 import join from './documents/join'
+import footer from './documents/footer'
 
 export const schemaTypes = [
   pageHeader,
@@ -31,4 +32,5 @@ export const schemaTypes = [
   donate,
   contact,
   join,
+  footer,
 ]

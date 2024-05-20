@@ -30,6 +30,7 @@ export default defineConfig({
             singletonListItem(S, 'donate', 'Donate'),
             singletonListItem(S, 'contact', 'Contact'),
             singletonListItem(S, 'join', 'Join'),
+            singletonListItem(S, 'footer', 'Footer'),
           ]),
     }),
     visionTool(),

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
   FaInstagram as Instagram,
   FaLinkedin as LinkedIn,
@@ -5,7 +6,26 @@ import {
 import { MdOutlineMail as Email } from 'react-icons/md';
 import { NavLink, Link } from 'react-router-dom';
 
+import sanityClient from '../client.tsx';
+
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [linkedIn, setLinkedIn] = useState('');
+  const [instagram, setInstagram] = useState('');
+
+  useEffect(() => {
+    const query = `*[_type=='contact'][0]`;
+
+    const getData = async () => {
+      const { email, linkedIn, instagram } = await sanityClient.fetch(query);
+      setEmail(email);
+      setLinkedIn(linkedIn);
+      setInstagram(instagram);
+    };
+
+    getData();
+  }, []);
+
   return (
     <>
       <footer className='w-full bg-neutral-100  text-white capitalize'>
@@ -45,14 +65,14 @@ const Footer = () => {
             <p className='text-xs'>Copyright © 2024 UW Solar Decathlon</p>
             <div className='flex gap-4 scale-150'>
               <Link
-                to='mailto:solardecathlon@uw.edu'
+                to={`mailto:${email}`}
                 className='transition ease-in-out duration-300 hover:text-primary'
                 aria-label='Email'
               >
                 <Email />
               </Link>
               <Link
-                to='https://www.linkedin.com/company/uw-solar-decathlon/'
+                to={linkedIn}
                 target='_blank'
                 className='transition ease-in-out duration-300 hover:text-primary'
                 aria-label='LinkedIn'
@@ -60,7 +80,7 @@ const Footer = () => {
                 <LinkedIn />
               </Link>
               <Link
-                to='https://www.instagram.com/uwsolardecathlon/'
+                to={instagram}
                 target='_blank'
                 className='transition ease-in-out duration-300 hover:text-primary'
                 aria-label='Instagram'
@@ -111,25 +131,17 @@ const Footer = () => {
 
         <div className='flex flex-col border-t border-neutral-200 pt-8 gap-4'>
           <div className='flex gap-4'>
-            <Link to='mailto:solardecathlon@uw.edu' aria-label='Email'>
+            <Link to={`mailto:${email}`} aria-label='Email'>
               <Email size={28} />
             </Link>
-            <Link
-              to='https://www.linkedin.com/company/uw-solar-decathlon/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
+            <Link to={linkedIn} target='_blank' aria-label='LinkedIn'>
               <LinkedIn size={28} />
             </Link>
-            <Link
-              to='https://www.instagram.com/uwsolardecathlon/'
-              target='_blank'
-              aria-label='Instagram'
-            >
+            <Link to={instagram} target='_blank' aria-label='Instagram'>
               <Instagram size={28} />
             </Link>
           </div>
-          <p className='text-xs'>Copyright © 2024 UW Solar Decathlon</p>
+          <p className='text-xs'>{`Copyright © ${new Date().getFullYear()} UW Solar Decathlon`}</p>
         </div>
       </footer>
     </>

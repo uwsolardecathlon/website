@@ -12,16 +12,16 @@ import { components } from '../utils/portableText.tsx';
 
 const Donate = () => {
   const [header, setHeader] = useState<SectionWithImage>();
-  const [section, setSection] = useState<SectionWithImageAndButton>();
+  const [support, setSupport] = useState<SectionWithImageAndButton>();
 
   useEffect(() => {
     const query = `*[_type=='donate'][0]`;
 
     const getData = async () => {
-      const { header, section } = await sanityClient.fetch(query);
+      const { header, support } = await sanityClient.fetch(query);
 
       setHeader(header);
-      setSection(section);
+      setSupport(support);
     };
 
     getData();
@@ -36,19 +36,19 @@ const Donate = () => {
           imageSrc={getImg(header.img)}
         />
       )}
-      {section && (
+      {support && (
         <section className='flex max-md:flex-col max-md:gap-12 items-start lg:items-center container'>
           <div className='md:w-1/2 md:pr-12 lg:pr-20 flex flex-col gap-4'>
-            <H2>{section.heading}</H2>
-            <PortableText value={section.body as []} components={components} />
+            <H2>{support.heading}</H2>
+            <PortableText value={support.body as []} components={components} />
             <Button
-              label={section.btn.label}
+              label={support.btn.label}
               isLink
-              href={section.btn.href}
+              href={support.btn.href}
               className='mt-2'
             />
           </div>
-          <img className='w-full md:w-1/2' src={getImg(section.img)} alt='' />
+          <img className='w-full md:w-1/2' src={getImg(support.img)} alt='' />
         </section>
       )}
     </div>

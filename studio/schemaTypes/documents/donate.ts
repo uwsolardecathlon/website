@@ -4,7 +4,7 @@ export default {
   type: 'document',
   groups: [
     {name: 'header', title: 'Header'},
-    {name: 'section', title: 'Section'},
+    {name: 'support', title: 'Support'},
   ],
   fields: [
     {
@@ -16,12 +16,12 @@ export default {
       group: 'header',
     },
     {
-      name: 'section',
-      title: 'Section',
+      name: 'support',
+      title: 'Support',
       type: 'imgBtnSection',
       validation: (rule: any) => rule.required(),
       options: {collapsible: true},
-      group: 'section',
+      group: 'support',
     },
   ],
   preview: {

@@ -27,8 +27,8 @@ const Team = () => {
 
       setHeader(header);
       setOverview(overview);
-      setSubteams(subteams);
-      setRelatedGroups(relatedGroups);
+      setSubteams(subteams ?? []);
+      setRelatedGroups(relatedGroups ?? []);
     };
 
     getData();
