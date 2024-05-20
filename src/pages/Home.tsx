@@ -10,6 +10,7 @@ import Subtitle1 from '../components/text/Subtitle1.tsx';
 import Subtitle2 from '../components/text/Subtitle2.tsx';
 
 import {
+  Button as ButtonType,
   Section,
   SectionWithImageAndButton,
   SectionWithButton,
@@ -19,8 +20,8 @@ import { getImg } from '../utils/getImg.ts';
 import { components } from '../utils/portableText.tsx';
 
 type GetInvolvedSection = Section & {
-  joinBtnText: string;
-  donateBtnText: string;
+  joinBtn: ButtonType;
+  donateBtn: ButtonType;
 };
 
 const Home = () => {
@@ -52,10 +53,10 @@ const Home = () => {
           <div className='flex flex-col gap-4 md:gap-8 max-md:items-center max-md:text-center'>
             <H1>{hero.heading}</H1>
             <Subtitle1 className='max-w-sm'>{hero.body}</Subtitle1>
-            <NavLink to='/about' className='w-fit'>
+            <NavLink to={hero.btn.href} className='w-fit'>
               <Button
                 className='w-fit'
-                label={hero.btnText}
+                label={hero.btn.label}
                 variant='secondary'
                 icon={GoArrowRight}
                 tabIndex={-1}
@@ -77,9 +78,9 @@ const Home = () => {
             </H2>
             <div className='flex flex-col gap-4'>
               <Subtitle2 className='text-white'>{mission.body}</Subtitle2>
-              <NavLink to='/competition' className='w-fit'>
+              <NavLink to={mission.btn.href} className='w-fit'>
                 <Button
-                  label={mission.btnText}
+                  label={mission.btn.label}
                   variant='secondary'
                   className='w-fit border-white/60 hover:border-white text-white'
                   tabIndex={-1}
@@ -99,10 +100,10 @@ const Home = () => {
           <div className='flex flex-col gap-4'>
             <H2>{team.heading}</H2>
             <PortableText value={team.body as []} components={components} />
-            <NavLink to='/team' className='w-fit'>
+            <NavLink to={team.btn.href} className='w-fit'>
               <Button
                 className='w-fit'
-                label={team.btnText}
+                label={team.btn.label}
                 variant='secondary'
                 tabIndex={-1}
               />
@@ -118,16 +119,16 @@ const Home = () => {
               {getInvolved.body}
             </p>
             <div className='flex gap-4'>
-              <NavLink to='/join' className='w-fit'>
+              <NavLink to={getInvolved.joinBtn.href} className='w-fit'>
                 <Button
-                  label={getInvolved.joinBtnText}
+                  label={getInvolved.joinBtn.label}
                   variant='primary'
                   tabIndex={-1}
                 />
               </NavLink>
-              <NavLink to='/donate' className='w-fit'>
+              <NavLink to={getInvolved.donateBtn.href} className='w-fit'>
                 <Button
-                  label={getInvolved.donateBtnText}
+                  label={getInvolved.donateBtn.label}
                   variant='secondary'
                   tabIndex={-1}
                 />

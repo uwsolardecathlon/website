@@ -1,10 +1,15 @@
+export type Button = {
+  label: string;
+  href: string;
+};
+
 export type Section = {
   heading: string;
   body: string | []; // allow either plaintext or PortableText
 };
 
 export type SectionWithButton = Section & {
-  btnText: string;
+  btn: Button;
 };
 
 export type SectionWithImage = Section & {
@@ -12,6 +17,6 @@ export type SectionWithImage = Section & {
 };
 
 export type SectionWithImageAndButton = Section & {
-  btnText: string;
+  btn: Button;
   img: string;
 };

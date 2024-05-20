@@ -1,42 +1,75 @@
+import { useState, useEffect } from 'react';
+import { PortableText } from '@portabletext/react';
+
 import Button from '../components/Button.tsx';
 import H2 from '../components/text/H2';
 import PageHeader from '../components/PageHeader.tsx';
 import Accordion from '../components/Accordion.tsx';
-import { faq } from '../data/faq.tsx';
+import { AccordionPanelProps } from '../components/AccordionPanel.tsx';
+
+import { SectionWithImage, SectionWithImageAndButton } from '../types/types.ts';
+import sanityClient from '../client.tsx';
+import { getImg } from '../utils/getImg.ts';
+import { components } from '../utils/portableText.tsx';
+
+type FAQItem = {
+  question: string;
+  answer: [];
+};
 
 const Join = () => {
+  const [header, setHeader] = useState<SectionWithImage>();
+  const [apply, setApply] = useState<SectionWithImageAndButton>();
+  const [faq, setFaq] = useState<AccordionPanelProps[]>();
+
+  useEffect(() => {
+    const query = `*[_type=='joinPage'][0]`;
+
+    const getData = async () => {
+      const { header, apply, faq } = await sanityClient.fetch(query);
+
+      setHeader(header);
+      setApply(apply);
+      setFaq(
+        faq.map((item: FAQItem) => {
+          return {
+            title: item.question,
+            content: (
+              <PortableText value={item.answer} components={components} />
+            ),
+          };
+        })
+      );
+    };
+
+    getData();
+  }, []);
+
   return (
     <div className='mt-24 mb-16 md:mt-32 md:mb-20'>
-      <PageHeader
-        title='Join Us'
-        subtitle="Interested in joining? When you're ready,
-        fill out the application linked below."
-        imageSrc='/images/join_hero.png'
-        imageAlt=''
-      />
-
+      {header && (
+        <PageHeader
+          title={header.heading}
+          subtitle={header.body as string}
+          imageSrc={getImg(header.img)}
+        />
+      )}
       <div className='flex flex-col sm:flex-row gap-12 lg:gap-28 container'>
-        <section className='flex flex-col gap-4 sm:w-1/2'>
-          <H2>How do I join?</H2>
-          <p>
-            The University of Solar Decathlon is always looking for new members
-            to join our team. Through interdisciplinary project management, we
-            are looking to get all students into the clean energy workforce. If
-            you are interested in participating, please click the Apply button
-            below.
-          </p>
-          <div>
-            <Button
-              label='Apply'
-              isLink
-              href='https://docs.google.com/forms/d/e/1FAIpQLSeiq1ESdIdI-FjZdShg6LqCIMN0xCSeSiRpsVBt9bDwFWOJ6w/viewform'
-            />
-          </div>
-        </section>
-        <section className='flex flex-col gap-2 sm:w-3/5'>
-          <H2>FAQ</H2>
-          <Accordion panels={faq} />
-        </section>
+        {apply && (
+          <section className='flex flex-col gap-4 sm:w-1/2'>
+            <H2>{apply.heading}</H2>
+            <PortableText value={apply.body as []} components={components} />
+            <div>
+              <Button label={apply.btn.label} isLink href={apply.btn.href} />
+            </div>
+          </section>
+        )}
+        {faq && (
+          <section className='flex flex-col gap-2 sm:w-3/5'>
+            <H2>FAQ</H2>
+            <Accordion panels={faq} />
+          </section>
+        )}
       </div>
     </div>
   );

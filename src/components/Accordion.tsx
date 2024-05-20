@@ -1,6 +1,6 @@
 import AccordionPanel, { AccordionPanelProps } from './AccordionPanel';
 
-interface AccordionProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface AccordionProps extends React.HTMLAttributes<HTMLUListElement> {
   panels: AccordionPanelProps[];
 }
 

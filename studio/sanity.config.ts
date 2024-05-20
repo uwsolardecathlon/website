@@ -29,6 +29,7 @@ export default defineConfig({
             singletonListItem(S, 'competitionPage', 'Competition'),
             singletonListItem(S, 'donatePage', 'Donate'),
             singletonListItem(S, 'contactPage', 'Contact'),
+            singletonListItem(S, 'joinPage', 'Join'),
           ]),
     }),
     visionTool(),

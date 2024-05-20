@@ -41,7 +41,12 @@ const Donate = () => {
           <div className='md:w-1/2 md:pr-12 lg:pr-20 flex flex-col gap-4'>
             <H2>{section.heading}</H2>
             <PortableText value={section.body as []} components={components} />
-            <Button label={section.btnText} className='mt-2' />
+            <Button
+              label={section.btn.label}
+              isLink
+              href={section.btn.href}
+              className='mt-2'
+            />
           </div>
           <img className='w-full md:w-1/2' src={getImg(section.img)} alt='' />
         </section>

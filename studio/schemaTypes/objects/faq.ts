@@ -4,13 +4,6 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'id',
-      title: 'ID',
-      description: 'Questions will be ordered by ID in ascending order.',
-      type: 'number',
-      validation: (rule: any) => rule.required(),
-    },
-    {
       name: 'question',
       title: 'Question',
       type: 'string',
@@ -20,11 +13,7 @@ export default {
       name: 'answer',
       title: 'Answer',
       type: 'array',
-      of: [
-        {
-          type: 'block',
-        },
-      ],
+      of: [{type: 'block'}],
       validation: (rule: any) => rule.required(),
     },
   ],

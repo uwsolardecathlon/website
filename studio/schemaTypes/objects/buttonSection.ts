@@ -17,10 +17,11 @@ export default {
       validation: (rule: any) => rule.required(),
     },
     {
-      name: 'btnText',
-      title: 'Button Text',
-      type: 'string',
+      name: 'btn',
+      title: 'Button',
+      type: 'btn',
       validation: (rule: any) => rule.required(),
+      options: {collapsible: true},
     },
   ],
 }
