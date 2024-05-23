@@ -48,7 +48,7 @@ const Home = () => {
 
   return (
     <>
-      {hero && (
+      {hero ? (
         <section className='flex flex-col gap-12 md:gap-20 mt-24 md:mt-40 container'>
           <div className='flex flex-col gap-4 md:gap-8 max-md:items-center max-md:text-center'>
             <H1>{hero.heading}</H1>
@@ -69,6 +69,9 @@ const Home = () => {
             className='aspect-[4/5] sm:aspect-[16/9] object-cover'
           />
         </section>
+      ) : (
+        // Prevent layout shift
+        <div className='h-screen'></div>
       )}
       {mission && (
         <section className=' bg-primary-dark text-white py-12 sm:py-20 lg:py-32 mt-20'>

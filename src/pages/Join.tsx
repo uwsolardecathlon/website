@@ -47,12 +47,15 @@ const Join = () => {
 
   return (
     <div className='mt-24 mb-16 md:mt-32 md:mb-20'>
-      {header && (
+      {header ? (
         <PageHeader
           title={header.heading}
           subtitle={header.body as string}
           imageSrc={getImg(header.img)}
         />
+      ) : (
+        // Prevent layout shift
+        <div className='h-screen'></div>
       )}
       <div className='flex flex-col sm:flex-row gap-12 lg:gap-28 container'>
         {apply && (

@@ -36,12 +36,15 @@ const Team = () => {
 
   return (
     <div className='mt-24 mb-16 md:mt-32 md:mb-20'>
-      {header && (
+      {header ? (
         <PageHeader
           title={header.heading}
           subtitle={header.body as string}
           imageSrc={getImg(header.img)}
         />
+      ) : (
+        // Prevent layout shift
+        <div className='h-screen'></div>
       )}
       {overview && (
         <section className='container flex flex-col gap-4'>

@@ -23,13 +23,16 @@ const Contact = () => {
 
   return (
     <section className='flex max-md:flex-col justify-between gap-12 md:gap-16 lg:gap-24 container my-24 md:my-32'>
-      {header && (
+      {header ? (
         <div className='text-center md:text-left flex flex-col gap-4'>
           <H1>{header.heading}</H1>
           <Subtitle1 className='max-md:mx-auto max-w-md lg:max-w-[400px]'>
             {header.body}
           </Subtitle1>
         </div>
+      ) : (
+        // Prevent layout shift
+        <div className='h-screen'></div>
       )}
       <Form className='flex-1' />
     </section>

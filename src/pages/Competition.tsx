@@ -34,12 +34,15 @@ const Competition = () => {
 
   return (
     <div className='mt-24 mb-16 md:mt-32 md:mb-20'>
-      {header && (
+      {header ? (
         <PageHeader
           title={header.heading}
           subtitle={header.body as string}
           imageSrc={getImg(header.img)}
         />
+      ) : (
+        // Prevent layout shift
+        <div className='h-screen'></div>
       )}
       {background && (
         <section className='flex max-md:flex-col max-md:gap-8 items-start lg:items-center container'>
